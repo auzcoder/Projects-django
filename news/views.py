@@ -7,4 +7,4 @@ from .models import New
 class PostListView(ListView):
     model = New
     template_name = 'news/news.html'
-    context_object_name = 'posts'
+    context_object_name = 'news'
