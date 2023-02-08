@@ -7,7 +7,7 @@ from django.utils import timezone
 
 # Create your models here.
 
-#Kategoriya yaratish qismi
+# Kategoriya yaratish qismi
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -23,10 +23,10 @@ class New (models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     description = models.CharField(max_length=200, blank=True)
-    full_info =RichTextField('text')
-    header_images = models.ImageField(default='news.png', upload_to = 'uploads/news/images', blank=True)
+    full_info = RichTextField('text')
+    header_images = models.ImageField(default='news.png', upload_to='uploads/news/images', blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
-    #upload_to = 'news/image'
+    # upload_to = 'news/image'
     date = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)

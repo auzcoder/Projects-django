@@ -8,4 +8,3 @@ urlpatterns = [
     path('news/<int:pk>/', PostDetailView.as_view(), name = 'post_detail'),
 ]
 
-
