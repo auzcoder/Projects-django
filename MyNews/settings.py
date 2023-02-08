@@ -48,7 +48,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
 ]
 
-CKEDITOR_UPLOAD_PATH = 'uploads/'
+CKEDITOR_UPLOAD_PATH = '../uploads/'
 CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
 MIDDLEWARE = [
@@ -117,7 +117,7 @@ AUTH_PASSWORD_VALIDATORS = [
 
 LANGUAGE_CODE = 'en-us'
 
-TIME_ZONE = 'UTC'
+TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
@@ -144,8 +144,8 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 
-# CKEDITOR_CONFIGS = {
-#     'default': {
-#         'toolbar':'full',
-#     }
-# }
+CKEDITOR_CONFIGS = {
+    'default': {
+        'toolbar':'full',
+    }
+}
