@@ -8,32 +8,61 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-                {% for new in news %}
-                <div class="sn-containeer">
-                    <div class="row row-cols-1 row-cols-md-3">
+
+                <div class="row row-cols-1 row-cols-md-3">
+                    {% for new in news %}
                       <div class="col mb-4">
                         <div class="card h-100">
-                          <img src="{{ new.header_images.url }}" class="card-img-top" alt="{{ new.header_images.name }}"/>
+                          <!--Card image-->
+                          <div class="view overlay">
+                            <img class="card-img-top" src="{{ new.header_images.url }}" class="card-img-top"
+                                 alt="{{ new.header_images.name }}" style="height: 144px; width: 215px">
+                          </div>
+                          <!--Card content-->
                           <div class="card-body">
-                            <h5 class="card-title"><a href="{% url 'post_detail' new.pk %}"> {{  new.name }}</a></h5>
-                            <p class="card-text">
-                                {{ new.description }}
-                            </p>
+                            <!--Title-->
+                              <h5 class="card-title"><a href="{% url 'post_detail' new.pk %}">{{  new.name | slice:":50" }}...</a></h5>
+                            <!--Text-->
                           </div>
-                          <div class="card-footer">
-                            <small class="text-muted">{{ new.date | date:"d.m.Y"}}-yil |  Vaqt: {{ new.date | date:"h:i" }}</small>
-                          </div>
+                            <p class="card-fuchsia mp-2"><i class="bi bi-calendar3 mx-2"></i>{{ new.date | date:"d.m.Y"}} |  <i class="bi bi-alarm"></i> {{ new.date | date:"H:i"}}</p>
                         </div>
+                        <!-- Card -->
                       </div>
-                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
+
+<!-- Card Regular -->
+{#            <div class="d-flex">#}
+{#                {% for new in news %}#}
+{#                <div class="containeer">#}
+{#                    <div class="col">#}
+{#                      <div class="mb-4">#}
+{#                        <div class="card h-100" style="height:400px">#}
+{#                          <img src="{{ new.header_images.url }}" class="card-img-top" alt="{{ new.header_images.name }}"/>#}
+{#                          <div class="card-body">#}
+{#                            <h5 class="card-title"><a href="{% url 'post_detail' new.pk %}"> {{  new.name }}</a></h5>#}
+{#                            <p class="card-text">#}
+{#                                {{ new.description | slice:"1:4" }}#}
+{#                            </p>#}
+{#                          </div>#}
+{#                          <div class="card-footer">#}
+{#                            <small class="text-muted">{{ new.date | date:"d.m.Y"}}-yil |  Vaqt: {{ new.date | date:"h:i"}}</small>#}
+{#                          </div>#}
+{#                        </div>#}
+{#                      </div>#}
+{#                    </div>#}
+{#                </div>#}
+{#                {% endfor %}#}
+{#            </div>#}
+
+
+
                 <div class="sn-related">
                     <h2>Related post</h2>
                     <div class="row sn-slider">
                         <div class="col-md-4">
-                            <div class="sn-img h-100">
-                                 <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+                            <div class="sn-img">
+                                <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
                                 <div class="sn-title">
                                     <a href="">Interdum et fames ac ante</a>
                                 </div>
