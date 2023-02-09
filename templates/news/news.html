@@ -31,32 +31,6 @@
                     {% endfor %}
                 </div>
 
-<!-- Card Regular -->
-{#            <div class="d-flex">#}
-{#                {% for new in news %}#}
-{#                <div class="containeer">#}
-{#                    <div class="col">#}
-{#                      <div class="mb-4">#}
-{#                        <div class="card h-100" style="height:400px">#}
-{#                          <img src="{{ new.header_images.url }}" class="card-img-top" alt="{{ new.header_images.name }}"/>#}
-{#                          <div class="card-body">#}
-{#                            <h5 class="card-title"><a href="{% url 'post_detail' new.pk %}"> {{  new.name }}</a></h5>#}
-{#                            <p class="card-text">#}
-{#                                {{ new.description | slice:"1:4" }}#}
-{#                            </p>#}
-{#                          </div>#}
-{#                          <div class="card-footer">#}
-{#                            <small class="text-muted">{{ new.date | date:"d.m.Y"}}-yil |  Vaqt: {{ new.date | date:"h:i"}}</small>#}
-{#                          </div>#}
-{#                        </div>#}
-{#                      </div>#}
-{#                    </div>#}
-{#                </div>#}
-{#                {% endfor %}#}
-{#            </div>#}
-
-
-
                 <div class="sn-related">
                     <h2>Related post</h2>
                     <div class="row sn-slider">
