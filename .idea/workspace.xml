@@ -50,20 +50,27 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "settings.editor.selected.configurable": "vcs.Git",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "GitStage.ChangesTree.GroupingKeys": [
+      "directory",
+      "module",
+      "repository"
+    ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
@@ -105,7 +112,7 @@
       <updated>1675764004427</updated>
       <workItem from="1675764006730" duration="718000" />
       <workItem from="1675917493017" duration="3804000" />
-      <workItem from="1675932438481" duration="2486000" />
+      <workItem from="1675932438481" duration="2804000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Update .gitignore&quot;&#10;&#10;This reverts commit 28927c2ed93ad5627bf0b0d5c2f105f96f5a0448.">
       <created>1675848394500</created>
@@ -142,7 +149,28 @@
       <option name="project" value="LOCAL" />
       <updated>1675855315733</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new&#10;&#10;new">
+      <created>1675934944232</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1675934944232</updated>
+    </task>
+    <task id="LOCAL-00007" summary="new&#10;&#10;new">
+      <created>1675934952048</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1675934952048</updated>
+    </task>
+    <task id="LOCAL-00008" summary="new&#10;&#10;new">
+      <created>1675935226552</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1675935226552</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -190,6 +218,7 @@
     <MESSAGE value="Yangilandi..." />
     <MESSAGE value="Merge remote-tracking branch 'origin/main'" />
     <MESSAGE value="Yangilandi...&#10;&#10;Yangilandi..." />
-    <option name="LAST_COMMIT_MESSAGE" value="Yangilandi...&#10;&#10;Yangilandi..." />
+    <MESSAGE value="new&#10;&#10;new" />
+    <option name="LAST_COMMIT_MESSAGE" value="new&#10;&#10;new" />
   </component>
 </project>
