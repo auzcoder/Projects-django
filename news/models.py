@@ -23,8 +23,8 @@ class New (models.Model):
     name = models.CharField(max_length=200)
     slug = models.SlugField(max_length=200)
     description = models.CharField(max_length=200, blank=True)
-    full_info = RichTextField('text')
-    header_images = models.ImageField(default='news.png', upload_to='uploads/news/images', blank=True)
+    full_info = RichTextField()
+    header_images = models.ImageField(default='news/images/news.jpg', upload_to='news/images', blank=True)
     category = models.ForeignKey(Category, on_delete=models.CASCADE)
     # upload_to = 'news/image'
     date = models.DateTimeField(default=timezone.now)
