@@ -3,11 +3,18 @@ from django.views.generic import ListView, DetailView
 from .models import New, Category
 
 
+
+examp = [
+    {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
+    {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
+]
+
 # Create your views here.
 class PostListView(ListView):
-    model = New
+    queryset = New.object.filter(status='PB')
     template_name = 'news/news.html'
     context_object_name = 'news'
+
 
 
 class PostDetailView(DetailView):
