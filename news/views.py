@@ -9,10 +9,13 @@ class HomePageView(TemplateView):
     category = Category.objects.all()
     context_object_name = 'home_page_news'
 
-examp = [
-    {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
-    {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
-]
+class ContactPageView(TemplateView):
+    template_name = 'contact.html'
+
+# examp = [
+#     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
+#     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
+# ]
 
 # Create your views here.
 class PostListView(ListView):

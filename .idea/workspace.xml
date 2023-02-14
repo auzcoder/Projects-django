@@ -5,11 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="12fcbb06-8014-4b80-a8bb-3a228e938281" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/assets/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/assets/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news/news.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/news.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/news/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/news_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/uploads/news/images/news.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/news/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/news/urls.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,6 +118,7 @@
       <workItem from="1675932438481" duration="3615000" />
       <workItem from="1676000520890" duration="1007000" />
       <workItem from="1676010960125" duration="6649000" />
+      <workItem from="1676371269635" duration="2120000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Update .gitignore&quot;&#10;&#10;This reverts commit 28927c2ed93ad5627bf0b0d5c2f105f96f5a0448.">
       <created>1675848394500</created>

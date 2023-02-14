@@ -113,12 +113,13 @@
                             </div>
                         </div>
                         <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>
-                        <a href="contact.html" class="nav-item nav-link bigtext">Jahon</a>
-                        <a href="single-page.html" class="nav-item nav-link bigtext">Iqtisodiyot</a>
-                        <a href="contact.html" class="nav-item nav-link bigtext">Jamiyat</a>
-                        <a href="single-page.html" class="nav-item nav-link bigtext">Fan-texnika</a>
-                        <a href="contact.html" class="nav-item nav-link bigtext">Biznes</a>
-                        <a href="contact.html" class="nav-item nav-link bigtext">Audio</a>
+                        <a href="#" class="nav-item nav-link bigtext">Jahon</a>
+                        <a href="#" class="nav-item nav-link bigtext">Iqtisodiyot</a>
+                        <a href="#" class="nav-item nav-link bigtext">Jamiyat</a>
+                        <a href="#" class="nav-item nav-link bigtext">Fan-texnika</a>
+                        <a href="#" class="nav-item nav-link bigtext">Biznes</a>
+                        <a href="#" class="nav-item nav-link bigtext">Audio</a>
+                        <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
                     </div>
                     <div class="social ml-auto">
                         <a href=""><i class="fab fa-twitter"></i></a>
@@ -242,14 +243,14 @@
     <!-- Back to Top -->
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
-
+{% block javascript %}
 <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>
     <script src="{% static 'assets/lib/slick/slick.min.js' %}"></script>
-
     <!-- Template Javascript -->
     <script src="{% static 'assets/js/main.js' %}"></script>
+{% endblock javascript %}
 </body>
 </html>
