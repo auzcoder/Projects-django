@@ -25,7 +25,7 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     # path('', include('pages.urls')),
     path('news/', include('news.urls')),
-    path('contact/', ContactPageView.as_view(), name='contact'),
+    path('contact/', ContactPageView, name='contact'),
 ]
 
 

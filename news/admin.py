@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import New, Category, SubCategory
+from .models import New, Category, SubCategory, Contact
 
 # Register your models here.
 
@@ -25,3 +25,6 @@ class CategoryAdmin(admin.ModelAdmin):
     list_display = ['id', 'name']
     list_display_links = ['id', 'name']
     inlines = [SubCategoryInlineAdmin]
+
+
+admin.site.register(Contact)

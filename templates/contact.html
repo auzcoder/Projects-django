@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% block title %} Biz bilan aloqa {% endblock title %}
 
 {% block content %}
     <!-- Contact Start -->
@@ -8,20 +9,21 @@
                 <div class="row align-items-center">
                     <div class="col-md-8">
                         <div class="contact-form">
-                            <form>
+                            <form method="post">
+                                {% csrf_token %}
                                 <div class="form-row">
                                     <div class="form-group col-md-6">
-                                        <input type="text" class="form-control" placeholder="Ismingiz" />
+                                        <input type="text" class="form-control" placeholder="Ismingiz" name="name" />
                                     </div>
                                     <div class="form-group col-md-6">
-                                        <input type="email" class="form-control" placeholder="Email pochtangiz" />
+                                        <input type="email" class="form-control" placeholder="Email pochtangiz" name="email" />
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control" placeholder="Mavzu" />
+                                    <input type="text" class="form-control" placeholder="Mavzu" name="subject" />
                                 </div>
                                 <div class="form-group">
-                                    <textarea class="form-control" rows="5" placeholder="Xabar"></textarea>
+                                    <textarea class="form-control" rows="5" placeholder="Xabar" name="message" ></textarea>
                                 </div>
                                 <div><button class="btn" type="submit">Yuborish</button></div>
                             </form>
