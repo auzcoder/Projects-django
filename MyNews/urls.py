@@ -21,7 +21,7 @@ from django.urls import path, include
 from news.views import HomePageView, ContactPageView
 
 urlpatterns = [
-    path('', HomePageView.as_view(), name='home'),
+    path('', HomePageView, name='home'),
     path('admin/', admin.site.urls),
     # path('', include('pages.urls')),
     path('news/', include('news.urls')),

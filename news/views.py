@@ -5,11 +5,20 @@ from .models import New, Category
 from django.views.generic import TemplateView
 from .forms import ContactForm
 
-class HomePageView(TemplateView):
-    template_name = 'home.html'
-    news = New.object.all()
-    category = Category.objects.all()
-    context_object_name = 'home_page_news'
+# class HomePageView(TemplateView):
+#     template_name = 'home.html'
+#     news = New.object.all()
+#     category = Category.objects.all()
+#     context_object_name = 'home_page_news'
+
+def HomePageView(request):
+    news_list = New.published.all().order_by('-date')
+    categories = Category.objects.all()
+    context = {
+        'news_list': news_list,
+        "categories": categories
+    }
+    return render(request, 'home.html', context)
 
 class ContactPageView(TemplateView):
     template_name = 'contact.html'
@@ -32,17 +41,7 @@ class ContactPageView(TemplateView):
 
         return render(request, 'contact.html', context)
 
-# def ContactPageView(request):
-#     form = ContactForm(request.POST or None)
-#     if request.method == 'POST' and form.is_valid():
-#         form.save()
-#         return HttpResponse("<h2> Bog'langaniz uchun tasahkkur!")
-#
-#     context = {
-#         'form':form
-#     }
-#
-#     return render(request, 'contact.html', context)
+
 
 # examp = [
 #     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
