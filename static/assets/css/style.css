@@ -376,11 +376,17 @@ button.btn:hover {
 /**********************************/
 /********** Top News CSS **********/
 /**********************************/
+
 .top-news {
     position: relative;
     width: 100%;
     padding: 30px 0 0 0;
 }
+/*Sileder uchun stayle*/
+.sileder_pic {
+    height: 350px;
+}
+
 
 .top-news .tn-img {
     position: relative;

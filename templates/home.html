@@ -11,10 +11,10 @@
                     <div class="row tn-slider">
                         {% for news in news_list %}
                         <div class="col-md-6">
-                            <div class="tn-img">
-                                <img src="{{ news.header_images.url }}"/>
+                            <div class="tn-img sileder_pic">
+                                <img class="sileder_pic" src="{{ news.header_images.url }}"/>
                                 <div class="tn-title">
-                                    <a href="">{{ news.name }}</a>
+                                    <a href="">{{ news.name | truncatewords:7 }}</a>
                                 </div>
                             </div>
                         </div>
