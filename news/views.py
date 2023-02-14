@@ -11,21 +11,38 @@ class HomePageView(TemplateView):
     category = Category.objects.all()
     context_object_name = 'home_page_news'
 
-# class ContactPageView(TemplateView):
-#     form = ContactForm
-#     template_name = 'contact.html'
+class ContactPageView(TemplateView):
+    template_name = 'contact.html'
+    def get(self, request, *args, **kwargs):
+        form = ContactForm()
+        context = {
+            'form':form
+        }
 
-def ContactPageView(request):
-    form = ContactForm(request.POST or None)
-    if request.method == 'POST' and form.is_valid():
-        form.save()
-        return HttpResponse("<h2> Bog'langaniz uchun tasahkkur!")
+        return render(request, 'contact.html', context)
+    def post(self, request, *args, **kwargs):
+        form = ContactForm(request.POST)
+        if request.method == 'POST' and form.is_valid():
+            form.save()
+            return HttpResponse("<h2> Bog'langaniz uchun tasahkkur!")
 
-    context = {
-        'form':form
-    }
+        context = {
+            'form':form
+        }
 
-    return render(request, 'contact.html', context)
+        return render(request, 'contact.html', context)
+
+# def ContactPageView(request):
+#     form = ContactForm(request.POST or None)
+#     if request.method == 'POST' and form.is_valid():
+#         form.save()
+#         return HttpResponse("<h2> Bog'langaniz uchun tasahkkur!")
+#
+#     context = {
+#         'form':form
+#     }
+#
+#     return render(request, 'contact.html', context)
 
 # examp = [
 #     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
