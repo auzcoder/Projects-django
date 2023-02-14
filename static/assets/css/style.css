@@ -384,9 +384,14 @@ button.btn:hover {
 }
 /*Sileder uchun stayle*/
 .sileder_pic {
-    height: 350px;
+    height: 335px;
 }
 
+ /*barchasini o'qish uchun bo'limiga stayle*/
+.all_pic_img {
+    width: 248px;
+    height: 168px;
+}
 
 .top-news .tn-img {
     position: relative;
