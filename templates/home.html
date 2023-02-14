@@ -417,8 +417,8 @@
                     <div class="mn-list">
                         <h2>Sizni qiziqtirishi mumkin</h2>
                         <ul>
-                            {% for new in news_list %}
-                            <li><a href="{% url  %}">{{ new.name | truncatewords:5 }}</a></li>
+                            {% for news in news_list %}
+                            <li><a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
