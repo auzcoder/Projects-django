@@ -27,4 +27,8 @@ class CategoryAdmin(admin.ModelAdmin):
     inlines = [SubCategoryInlineAdmin]
 
 
-admin.site.register(Contact)
+@admin.register(Contact)
+class ContactAdmin(admin.ModelAdmin):
+    list_display = ["id", 'name', 'email', 'subject']
+    list_display_links = ['id', 'name', 'email']
+    list_filter = ['subject', 'name', 'email']
