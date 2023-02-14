@@ -12,7 +12,7 @@ from .forms import ContactForm
 #     context_object_name = 'home_page_news'
 
 def HomePageView(request):
-    news_list = New.published.all().order_by('-date')
+    news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
     categories = Category.objects.all()
     context = {
         'news_list': news_list,

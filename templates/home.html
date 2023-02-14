@@ -14,7 +14,7 @@
                             <div class="tn-img sileder_pic">
                                 <img class="sileder_pic" src="{{ news.header_images.url }}"/>
                                 <div class="tn-title">
-                                    <a href="">{{ news.name | truncatewords:7 }}</a>
+                                    <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:7 }}</a>
                                 </div>
                             </div>
                         </div>
