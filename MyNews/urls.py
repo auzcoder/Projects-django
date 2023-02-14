@@ -18,10 +18,13 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
 
+from news.views import HomePageView
+
 urlpatterns = [
+    path('', HomePageView.as_view(), name='home'),
     path('admin/', admin.site.urls),
-    path('', include('pages.urls')),
-    path('', include('news.urls')),
+    # path('', include('pages.urls')),
+    path('news/', include('news.urls')),
 ]
 
 

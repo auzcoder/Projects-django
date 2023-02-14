@@ -1,8 +1,13 @@
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
 from .models import New, Category
+from django.views.generic import TemplateView
 
-
+class HomePageView(TemplateView):
+    template_name = 'home.html'
+    news = New.object.all()
+    category = Category.objects.all()
+    context_object_name = 'home_page_news'
 
 examp = [
     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},

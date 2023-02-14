@@ -40,8 +40,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'pages',
-    'news',
+
+    'news', #ichki yangi yaratilgan app
 
     #tashqi app
     'ckeditor',
