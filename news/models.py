@@ -37,6 +37,7 @@ class New (models.Model):
     description = models.CharField(max_length=200, blank=True)
     full_info = RichTextField()
     header_images = models.ImageField(default='news/images/news.jpg', upload_to='news/images', blank=True)
+    category = models.ManyToManyField(Category, null=False, blank=False)
     sub_category = models.ManyToManyField(SubCategory, null=True, blank=True)
     # upload_to = 'news/image'
     date = models.DateTimeField(default=timezone.now)
