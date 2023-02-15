@@ -7,56 +7,56 @@
     <div class="top-news">
         <div class="container">
             <div class="row">
-                <div class="col-md-6 tn-left">
+                <div class="col-md-12 tn-left">
                     <div class="row tn-slider">
                         {% for news in news_list %}
-                        <div class="col-md-6">
+                        <div class="col-md-12">
                             <div class="tn-img sileder_pic">
                                 <img class="sileder_pic" src="{{ news.header_images.url }}"/>
                                 <div class="tn-title">
-                                    <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:7 }}</a>
+                                    <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:20 }}</a>
                                 </div>
                             </div>
                         </div>
                         {% endfor %}
                     </div>
                 </div>
-                <div class="col-md-6 tn-right">
-                    <div class="row">
-                        <div class="col-md-6">
-                            <div class="tn-img">
-                                <img src="{% static 'assets/img/news-350x223-1.jpg' %}" />
-                                <div class="tn-title">
-                                    <a href="">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="tn-img">
-                                <img src="{% static 'assets/img/news-350x223-2.jpg' %}" />
-                                <div class="tn-title">
-                                    <a href="">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="tn-img">
-                                <img src="{% static 'assets/img/news-350x223-3.jpg' %}" />
-                                <div class="tn-title">
-                                    <a href="">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-6">
-                            <div class="tn-img">
-                                <img src="{% static 'assets/img/news-350x223-4.jpg' %}" />
-                                <div class="tn-title">
-                                    <a href="">Lorem ipsum dolor sit</a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+{#                <div class="col-md-6 tn-right">#}
+{#                    <div class="row">#}
+{#                        <div class="col-md-6">#}
+{#                            <div class="tn-img">#}
+{#                                <img src="{% static 'assets/img/news-350x223-1.jpg' %}" />#}
+{#                                <div class="tn-title">#}
+{#                                    <a href="">Lorem ipsum dolor sit</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                            <div class="tn-img">#}
+{#                                <img src="{% static 'assets/img/news-350x223-2.jpg' %}" />#}
+{#                                <div class="tn-title">#}
+{#                                    <a href="">Lorem ipsum dolor sit</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                            <div class="tn-img">#}
+{#                                <img src="{% static 'assets/img/news-350x223-3.jpg' %}" />#}
+{#                                <div class="tn-title">#}
+{#                                    <a href="">Lorem ipsum dolor sit</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                        <div class="col-md-6">#}
+{#                            <div class="tn-img">#}
+{#                                <img src="{% static 'assets/img/news-350x223-4.jpg' %}" />#}
+{#                                <div class="tn-title">#}
+{#                                    <a href="">Lorem ipsum dolor sit</a>#}
+{#                                </div>#}
+{#                            </div>#}
+{#                        </div>#}
+{#                    </div>#}
+{#                </div>#}
             </div>
         </div>
     </div>
