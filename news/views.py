@@ -16,12 +16,20 @@ def HomePageView(request):
     news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
     uzbekistan_news = New.published.all().filter(category__name='O\'zbekiston')
     jahon_news = New.published.all().filter(category__name='Jahon')
+    iqtisod_news = New.published.all().filter(category__name='Iqtisodiyot')
+    jamiyat_news = New.published.all().filter(category__name='Jamiyat')
+    fantexnika_news = New.published.all().filter(category__name='Fan-texnika')
+    sport_news = New.published.all().filter(category__name='Sport')
 
     context = {
         'news_list': news_list,
         "categories": categories,
         'uzbekistan_news': uzbekistan_news,
         'jahon_news': jahon_news,
+        'iqtisod_news': iqtisod_news,
+        'jamiyat_news': jamiyat_news,
+        'fantexnika_news': fantexnika_news,
+        'sport_news': sport_news,
     }
     return render(request, 'home.html', context)
 
