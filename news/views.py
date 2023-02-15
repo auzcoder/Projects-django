@@ -12,11 +12,16 @@ from .forms import ContactForm
 #     context_object_name = 'home_page_news'
 
 def HomePageView(request):
-    news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
     categories = Category.objects.all()
+    news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
+    uzbekistan_news = New.published.all().filter(category__name='O\'zbekiston')
+    jahon_news = New.published.all().filter(category__name='Jahon')
+
     context = {
         'news_list': news_list,
-        "categories": categories
+        "categories": categories,
+        'uzbekistan_news': uzbekistan_news,
+        'jahon_news': jahon_news,
     }
     return render(request, 'home.html', context)
 

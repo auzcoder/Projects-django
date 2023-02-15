@@ -393,6 +393,11 @@ button.btn:hover {
     height: 168px;
 }
 
+.all_category_img {
+    width: 248px;
+    height: 158px;
+}
+
 .top-news .tn-img {
     position: relative;
     overflow: hidden;
