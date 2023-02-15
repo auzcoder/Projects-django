@@ -391,10 +391,10 @@
 
                 <div class="col-lg-3">
                     <div class="mn-list">
-                        <h2>Sizni qiziqtirishi mumkin</h2>
+                        <h2>Tavsiya etamiz</h2>
                         <ul>
                             {% for news in news_list %}
-                            <li><a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a></li>
+                            <li><a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:4 }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>
