@@ -398,6 +398,11 @@ button.btn:hover {
     height: 158px;
 }
 
+.all_page_news_img {
+    width: 100px;
+    height: 67px;
+}
+
 .top-news .tn-img {
     position: relative;
     overflow: hidden;

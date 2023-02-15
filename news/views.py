@@ -5,21 +5,36 @@ from .models import New, Category
 from django.views.generic import TemplateView
 from .forms import ContactForm
 
-# class HomePageView(TemplateView):
+# class HomePageView(ListView):
 #     template_name = 'home.html'
 #     news = New.object.all()
-#     category = Category.objects.all()
-#     context_object_name = 'home_page_news'
+#     # category = Category.objects.all()
+#     context_object_name = 'news'
+#
+#     def get_context_data(self, **kwargs):
+#         context = super().get_context_data(**kwargs)
+#         context['categories'] = Category.objects.all()
+#         context['news_list'] = New.published.all().order_by('-date')[:9]
+#         # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
+#         context['uzbekistan_news'] = New.published.all().filter(category__name='O\'zbekiston').order_by('-date')[0:3]
+#         context['jahon_news'] = New.published.all().filter(category__name='Jahon').order_by('-date')[0:3]
+#         context['iqtisod_news'] = New.published.all().filter(category__name='Iqtisodiyot').order_by('-date')[0:3]
+#         context['jamiyat_news'] = New.published.all().filter(category__name='Jamiyat').order_by('-date')[0:3]
+#         context['fantexnika_news'] = New.published.all().filter(category__name='Fan-texnika').order_by('-date')[0:3]
+#         context['sport_news'] = New.published.all().filter(category__name='Sport').order_by('-date')[0:3]
+#
+#         return (context)
+
 
 def HomePageView(request):
     categories = Category.objects.all()
     news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
-    uzbekistan_news = New.published.all().filter(category__name='O\'zbekiston')
-    jahon_news = New.published.all().filter(category__name='Jahon')
-    iqtisod_news = New.published.all().filter(category__name='Iqtisodiyot')
-    jamiyat_news = New.published.all().filter(category__name='Jamiyat')
-    fantexnika_news = New.published.all().filter(category__name='Fan-texnika')
-    sport_news = New.published.all().filter(category__name='Sport')
+    uzbekistan_news = New.published.all().filter(category__name='O\'zbekiston').order_by('-date')[0:3]
+    jahon_news = New.published.all().filter(category__name='Jahon').order_by('-date')[0:3]
+    iqtisod_news = New.published.all().filter(category__name='Iqtisodiyot').order_by('-date')[0:3]
+    jamiyat_news = New.published.all().filter(category__name='Jamiyat').order_by('-date')[0:3]
+    fantexnika_news = New.published.all().filter(category__name='Fan-texnika').order_by('-date')[0:3]
+    sport_news = New.published.all().filter(category__name='Sport').order_by('-date')[0:3]
 
     context = {
         'news_list': news_list,
@@ -38,7 +53,7 @@ class ContactPageView(TemplateView):
     def get(self, request, *args, **kwargs):
         form = ContactForm()
         context = {
-            'form':form
+            'form': form
         }
 
         return render(request, 'contact.html', context)
@@ -49,7 +64,7 @@ class ContactPageView(TemplateView):
             return HttpResponse("<h2> Bog'langaniz uchun tasahkkur!")
 
         context = {
-            'form':form
+            'form': form
         }
 
         return render(request, 'contact.html', context)

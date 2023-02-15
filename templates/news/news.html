@@ -8,7 +8,6 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-8">
-
                 <div class="row row-cols-1 row-cols-md-3">
                     {% for new in news %}
                       <div class="col mb-4">
@@ -89,54 +88,24 @@
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="sidebar-widget">
-                        <h2 class="sw-title">In This Category</h2>
+                        <h2 class="sw-title">Eng yangi postlar</h2>
                         <div class="news-list">
+                            {% for news in news_list %}
                             <div class="nl-item">
                                 <div class="nl-img">
-                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
+                                    <img src="{{ news.header_images.url }}" class="card-img-top all_page_news_img" alt="Skyscrapers"/>
                                 </div>
                                 <div class="nl-title">
-                                    <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
+                                    <a href="">{{ news.name | truncatewords:6 }}</a>
                                 </div>
                             </div>
-                            <div class="nl-item">
-                                <div class="nl-img">
-                                    <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/044.webp" class="card-img-top" alt="Skyscrapers"/>
-                                </div>
-                                <div class="nl-title">
-                                    <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="nl-item">
-                                <div class="nl-img">
-                                    <img src="img/news-350x223-3.jpg" />
-                                </div>
-                                <div class="nl-title">
-                                    <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="nl-item">
-                                <div class="nl-img">
-                                    <img src="img/news-350x223-4.jpg" />
-                                </div>
-                                <div class="nl-title">
-                                    <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
-                            <div class="nl-item">
-                                <div class="nl-img">
-                                    <img src="img/news-350x223-5.jpg" />
-                                </div>
-                                <div class="nl-title">
-                                    <a href="">Lorem ipsum dolor sit amet consec adipis elit</a>
-                                </div>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
 
                     <div class="sidebar-widget">
                         <div class="image">
-                            <a href="https://htmlcodex.com"><img src="img/ads-2.jpg" alt="Image"></a>
+                            <a href="https://htmlcodex.com"><img src="{% static 'assets/img/ads-2.jpg' %}" alt="Image"></a>
                         </div>
                     </div>
 
