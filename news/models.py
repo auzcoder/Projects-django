@@ -12,7 +12,7 @@ class PublishedManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(status = New.Status.Published)
 
-# Kategoriya yaratish qismi
+# Kategoriya yaratish qismi uchun model
 class Category(models.Model):
     name = models.CharField(max_length=50)
 
@@ -26,7 +26,7 @@ class SubCategory(models.Model):
     def __str__(self):
         return self.name
 
-# Yangiliklar uchun postlar qismi
+# Yangiliklar uchun postlar qismi bo'yicha model
 class New (models.Model):
     class Status(models.TextChoices):
         Draft = 'DF', 'Draft'
@@ -58,7 +58,7 @@ class New (models.Model):
         return self.name
 
 
-#Contact bo'limi uchun
+#Contact bo'limi uchun model
 class Contact(models.Model):
     name = models.CharField(max_length=200)
     email = models.EmailField(max_length=100)
