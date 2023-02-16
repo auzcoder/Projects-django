@@ -80,7 +80,7 @@ class ContactPageView(TemplateView):
 #     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
 # ]
 
-# Create your views here.
+# Create your views here. Post listlar uchun
 class PostListView(ListView):
     queryset = New.object.filter(status='PB')
     template_name = 'news/news.html'
