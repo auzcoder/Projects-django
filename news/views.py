@@ -93,6 +93,8 @@ class PostDetailView(DetailView):
     template_name = 'news/news_detail.html'
     context_object_name = 'new'
 
+
+# Category uchun views
 class CategoryListView(ListView):
     model = Category
     template_name = 'news/news_detail.html'
