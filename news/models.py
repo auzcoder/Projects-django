@@ -2,6 +2,7 @@
 from django.contrib.auth.models import User
 from django.db import models
 from ckeditor.fields import RichTextField
+from django.urls import reverse
 from django.utils import timezone
 
 
@@ -56,6 +57,9 @@ class New (models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse('post_detail', args=[self.pk])
 
 
 #Contact bo'limi uchun model
