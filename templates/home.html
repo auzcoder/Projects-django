@@ -14,7 +14,7 @@
                             <div class="tn-img sileder_pic">
                                 <img class="sileder_pic" src="{{ news.header_images.url }}"/>
                                 <div class="tn-title">
-                                    <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:20 }}</a>
+                                    <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:20 }}</a>
                                 </div>
                             </div>
                         </div>
@@ -74,7 +74,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -89,7 +89,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -113,7 +113,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -128,7 +128,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +151,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                                 <div class="cn-img">
                                     <img class="all_category_img" src="{{ news.header_images.url }}" />
                                     <div class="cn-title">
-                                        <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                        <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                     </div>
                                 </div>
                             </div>
@@ -191,7 +191,7 @@
                             <div class="mn-img">
                                 <img class="all_pic_img" src="{{ news.header_images.url }}" />
                                 <div class="mn-title">
-                                    <a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:5 }}</a>
+                                    <a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:5 }}</a>
                                 </div>
                             </div>
                         </div>
@@ -204,7 +204,7 @@
                         <h2>Tavsiya etamiz</h2>
                         <ul>
                             {% for news in news_list %}
-                            <li><a href="{% url 'post_detail' news.pk %}">{{ news.name | truncatewords:4 }}</a></li>
+                            <li><a href="{% url 'post_detail' news.slug %}">{{ news.name | truncatewords:4 }}</a></li>
                             {% endfor %}
                         </ul>
                     </div>

@@ -11,7 +11,7 @@ from django.utils import timezone
 #Publish manager uchun model
 class PublishedManager(models.Manager):
     def get_queryset(self):
-        return super().get_queryset().filter(status = New.Status.Published)
+        return super().get_queryset().filter(status=New.Status.Published)
 
 # Kategoriya yaratish qismi uchun model
 class Category(models.Model):
@@ -58,8 +58,6 @@ class New (models.Model):
     def __str__(self):
         return self.name
 
-    def get_absolute_url(self):
-        return reverse('post_detail', args=[self.pk])
 
 
 #Contact bo'limi uchun model

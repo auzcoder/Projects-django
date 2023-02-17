@@ -1,6 +1,8 @@
 from django.http import request, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView
+
+import news
 from .models import New, Category
 from django.views.generic import TemplateView
 from .forms import ContactForm
@@ -92,6 +94,7 @@ class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'new'
+
 
 
 # Category uchun views
