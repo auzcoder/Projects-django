@@ -6,6 +6,7 @@ def news_list(request):
 
     context = {
         'news_list': news_list,
+        'categories': categories,
     }
 
     return (context)

@@ -112,13 +112,10 @@
 
                             </div>
                         </div>
-                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>
-                        <a href="#" class="nav-item nav-link bigtext">Jahon</a>
-                        <a href="#" class="nav-item nav-link bigtext">Iqtisodiyot</a>
-                        <a href="#" class="nav-item nav-link bigtext">Jamiyat</a>
-                        <a href="#" class="nav-item nav-link bigtext">Fan-texnika</a>
-                        <a href="#" class="nav-item nav-link bigtext">Biznes</a>
-                        <a href="#" class="nav-item nav-link bigtext">Audio</a>
+{#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>#}
+                        {% for categorie in categories %}
+                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">{{ categorie.name }}</a>
+                        {% endfor %}
                         <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
                     </div>
                     <div class="social ml-auto">
