@@ -84,7 +84,7 @@ class ContactPageView(TemplateView):
 
 # Create your views here. Post listlar uchun
 class PostListView(ListView):
-    queryset = New.object.filter(status='PB')
+    queryset = New.object.filter(status='PB', )
     template_name = 'news/news.html'
     context_object_name = 'news'
 
