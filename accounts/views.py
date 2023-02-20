@@ -1,5 +1,5 @@
-from django.shortcuts import render
-from django.http import HttpResponse
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from .forms import LoginForm
 
@@ -16,16 +16,14 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('Siz tizimga kirdingiz!')
+                    return render(request, 'admin/home.html')
                 else:
                     return HttpResponse('Sizni hissobingiz faol holatda emas!')
             else:
                 return HttpResponse('Login yoki parol xato!')
 
     else:
-        return render(request, 'admin/login.html', context)
-
-        return render(request, 'admin/login.html', context)
+        return render(request, 'admin/login.html')
 
         form = LoginForm()
         context = {
