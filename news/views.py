@@ -1,6 +1,7 @@
 from django.http import request, HttpResponse
 from django.shortcuts import render
-from django.views.generic import ListView, DetailView
+from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
+from django.urls import reverse_lazy
 
 import news
 from .models import New, Category
@@ -103,3 +104,13 @@ class CategoryListView(ListView):
     template_name = 'news/news_detail.html'
     context_object_name = 'category'
 
+
+class NewsUpdateView(UpdateView):
+    model = New
+    fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
+    template_name = 'news/edit/update.html'
+
+class NewsDeleteView(DeleteView):
+    model = New
+    template_name = 'news/edit/delete.html'
+    success_url = reverse_lazy('home')
