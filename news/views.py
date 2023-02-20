@@ -109,6 +109,7 @@ class NewsUpdateView(UpdateView):
     model = New
     fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
     template_name = 'news/edit/update.html'
+    success_url = reverse_lazy('home')
 
 class NewsDeleteView(DeleteView):
     model = New
