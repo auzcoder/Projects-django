@@ -94,7 +94,7 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
-    context_object_name = 'new'
+    context_object_name = 'news'
 
 
 
@@ -120,3 +120,4 @@ class NewsCreateView(CreateView):
     model = New
     fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
     template_name = 'news/edit/create.html'
+    success_url = reverse_lazy('post_list')

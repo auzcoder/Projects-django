@@ -55,6 +55,9 @@ class New (models.Model):
     class Meta:
         ordering = ['-date']
 
+    def get_absolute_url(self):
+        return self.slug
+
     def __str__(self):
         return self.name
 

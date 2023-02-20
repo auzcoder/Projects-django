@@ -23,7 +23,6 @@ from news.views import HomePageView, ContactPageView, NewsCreateView
 urlpatterns = [
     path('', HomePageView, name='home'),
     path('admin/', admin.site.urls),
-    # path('', include('pages.urls')),
     path('news/', include('news.urls')),
     path('contact/', ContactPageView.as_view(), name='contact'),
     path('create/', NewsCreateView.as_view(), name='create_news'),
