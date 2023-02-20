@@ -19,3 +19,12 @@ def user_login(request):
                     return HttpResponse('Siz tizimga kirdingiz!')
                 else:
                     return HttpResponse('Sizni hissobingiz faol holatda emas!')
+            else:
+                return HttpResponse('Login yoki parol xato!')
+
+    else:
+        form = LoginForm()
+        context = {
+            'form': form
+        }
+        return render(request, 'admin/login.html', context)
