@@ -40,6 +40,7 @@ class New (models.Model):
     header_images = models.ImageField(default='news/images/news.jpg', upload_to='news/images', blank=True)
     category = models.ManyToManyField(Category, null=False, blank=False)
     sub_category = models.ManyToManyField(SubCategory, null=True, blank=True)
+    # author = models.ForeignKey(User, on_delete=models.CASCADE)
     # upload_to = 'news/image'
     date = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
@@ -51,12 +52,11 @@ class New (models.Model):
     object = models.Manager() #Default manager
     published = PublishedManager()
 
-    # userid = models.ForeignKey(User, on_delete=models.CASCADE)
     class Meta:
         ordering = ['-date']
 
     def get_absolute_url(self):
-        return self.slug
+        return reverse('post_detail', args=[str(self.slug)])
 
     def __str__(self):
         return self.name

@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 
     'news', #ichki yangi yaratilgan app
+    'accounts',
 
     #tashqi app
     'ckeditor',
