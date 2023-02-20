@@ -115,3 +115,8 @@ class NewsDeleteView(DeleteView):
     model = New
     template_name = 'news/edit/delete.html'
     success_url = reverse_lazy('home')
+
+class NewsCreateView(CreateView):
+    model = New
+    fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
+    template_name = 'news/edit/create.html'
