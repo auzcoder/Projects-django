@@ -14,7 +14,7 @@ def user_login(request):
                                 password=data['password']
                                 )
             if user is not None:
-                if user.is_active():
+                if user.is_active:
                     login(request, user)
                     return HttpResponse('Siz tizimga kirdingiz!')
                 else:
@@ -23,6 +23,10 @@ def user_login(request):
                 return HttpResponse('Login yoki parol xato!')
 
     else:
+        return render(request, 'admin/login.html', context)
+
+        return render(request, 'admin/login.html', context)
+
         form = LoginForm()
         context = {
             'form': form
