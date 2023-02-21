@@ -137,6 +137,7 @@ STATICFILES_DIRS = [BASE_DIR / 'static']
 MEDIA_URL = '/uploads/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
 
+LOGIN_REDIRECT_URL = 'admin_home_page'
 
 
 # Default primary key field type
@@ -148,6 +149,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 CKEDITOR_CONFIGS = {
     'default': {
-        'toolbar':'full',
+        'toolbar': 'full',
     }
 }
