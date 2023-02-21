@@ -18,7 +18,7 @@ def user_login(request):
             if user is not None:
                 if user.is_active:
                     login(request, user)
-                    return HttpResponse('admin_home_page')
+                    return HttpResponse('Siz tizimga kirdiz!')
                 else:
                     return HttpResponse('Sizni hissobingiz faol holatda emas!')
             else:
@@ -34,6 +34,6 @@ def user_login(request):
         return render(request, 'admin/login.html', context)
 
 
-class AdminHomePageView(ListView):
-    template_name = 'admin/home.html'
-    context_object_name = 'admin_home'
+# class AdminHomePageView(ListView):
+#     template_name = 'admin/home.html'
+#     context_object_name = 'admin_home'
