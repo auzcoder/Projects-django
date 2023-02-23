@@ -4,13 +4,13 @@
 <head>
     <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>{% block title %} AuzBlog {%endblock %}</title>
+    <title>{% block title %} AuzBlog {% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Yangiliklar.uz sayti uchun" name="keywords">
     <meta content="Yangiliklar.uz sayti uchun" name="description">
 
     <!-- Favicon -->
-{#    <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">#}
+    {#    <link href="{% static 'assets/img/favicon.ico' %}" rel="icon">#}
 
     <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:400,600&display=swap" rel="stylesheet">
@@ -29,108 +29,135 @@
 <body>
 
 <!-- Top Bar Start -->
-    <div class="top-bar">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="tb-contact">
-                        <p><i class="fas fa-envelope"></i>info@yangiliklar.uz</p>
-                        <p><i class="fas fa-phone-alt"></i>+99890 696 00 10</p>
-                    </div>
+<div class="top-bar">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="tb-contact">
+                    <p><i class="fas fa-envelope"></i>info@yangiliklar.uz</p>
+                    <p><i class="fas fa-phone-alt"></i>+99890 696 00 10</p>
                 </div>
-                <div class="col-md-6">
-                    <div class="tb-menu">
-                        <a href="">Haqida</a>
-                        <a href="">Maxfiylik</a>
-                        <a href="">Shartlar</a>
-                        <a href="{% url 'contact' %}">Bog'lanish</a>
-                    </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tb-menu">
+                    <a href="">Haqida</a>
+                    <a href="">Maxfiylik</a>
+                    <a href="">Shartlar</a>
+                    <a href="{% url 'contact' %}">Bog'lanish</a>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Top Bar Start -->
+</div>
+<!-- Top Bar Start -->
 
-    <!-- Brand Start -->
-    <div class="brand">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-3 col-md-4">
-                    <div class="b-logo">
-                        <a href="{% url 'home' %}">
-                            <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
-                        </a>
-                    </div>
+<!-- Brand Start -->
+<div class="brand">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-3 col-md-4">
+                <div class="b-logo">
+                    <a href="{% url 'home' %}">
+                        <img src="{% static 'assets/img/logo.png' %}" alt="Logo">
+                    </a>
                 </div>
-                <div class="col-lg-6 col-md-4">
-                    <div class="b-ads">
-                        <a href="http://namdu.uz" target="_blank">
-                            <img src="{% static 'assets/img/ads-1.jpg' %}" alt="Ads">
-                        </a>
-                    </div>
+            </div>
+            <div class="col-lg-6 col-md-4">
+                <div class="b-ads">
+                    <a href="http://namdu.uz" target="_blank">
+                        <img src="{% static 'assets/img/ads-1.jpg' %}" alt="Ads">
+                    </a>
                 </div>
-                <div class="col-lg-3 col-md-4">
-                    <div class="b-search">
-                        <input type="text" placeholder="Search">
-                        <button><i class="fa fa-search"></i></button>
-                    </div>
+            </div>
+            <div class="col-lg-3 col-md-4">
+                <div class="b-search">
+                    <input type="text" placeholder="Search">
+                    <button><i class="fa fa-search"></i></button>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Brand End -->
+</div>
+<!-- Brand End -->
 
-    <!-- Nav Bar Start -->
-    <div class="nav-bar">
-        <div class="container">
-            <nav class="navbar navbar-expand-md bg-dark navbar-dark">
-                <a href="#" class="navbar-brand">MENU</a>
-                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
+<!-- Nav Bar Start -->
+<div class="nav-bar">
+    <div class="container">
+        <nav class="navbar navbar-expand-md bg-dark navbar-dark">
+            <a href="#" class="navbar-brand">MENU</a>
+            <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
-                <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
-                    <div class="navbar-nav mr-auto">
-                        <a href="{% url 'home' %}" class="nav-item nav-link active">Bosh sahifa</a>
+            <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
+                <div class="navbar-nav mr-auto">
+                    <a href="{% url 'home' %}" class="nav-item nav-link active">Bosh sahifa</a>
+                    {#                        <div class="nav-item dropdown">#}
+                    {#                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hududlar</a>#}
+                    {#                            <div class="dropdown-menu">#}
+                    {#                                <a href="#" class="dropdown-item">Toshkent</a>#}
+                    {#                                <a href="#" class="dropdown-item">Andijon</a>#}
+                    {#                                <a href="#" class="dropdown-item">Farg'ona</a>#}
+                    {#                                <a href="#" class="dropdown-item">Namangan</a>#}
+                    {#                                <a href="#" class="dropdown-item">Samarqand</a>#}
+                    {#                                <a href="#" class="dropdown-item">Buxoro</a>#}
+                    {#                                <a href="#" class="dropdown-item">Xorazim</a>#}
+                    {#                                <a href="#" class="dropdown-item">Surxondaryo</a>#}
+                    {#                                <a href="#" class="dropdown-item">Qashqadaryo</a>#}
+                    {#                                <a href="#" class="dropdown-item">Sirdaryo</a>#}
+                    {#                                <a href="#" class="dropdown-item">Jizzah</a>#}
+                    {#                                <a href="#" class="dropdown-item">Toshkent vil</a>#}
+                    {#                                <a href="#" class="dropdown-item">Navoiy</a>#}
+                    {#                                <a href="#" class="dropdown-item">Qoraqalpog'iston Res</a>#}
+                    {##}
+                    {#                            </div>#}
+                    {#                        </div>#}
+                    {#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>#}
+
+
+
+
+                    {% for categorie in categories %}
+
+{% if categorie.sub_category %}
                         <div class="nav-item dropdown">
-                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hududlar</a>
-                            <div class="dropdown-menu">
-                                <a href="#" class="dropdown-item">Toshkent</a>
-                                <a href="#" class="dropdown-item">Andijon</a>
-                                <a href="#" class="dropdown-item">Farg'ona</a>
-                                <a href="#" class="dropdown-item">Namangan</a>
-                                <a href="#" class="dropdown-item">Samarqand</a>
-                                <a href="#" class="dropdown-item">Buxoro</a>
-                                <a href="#" class="dropdown-item">Xorazim</a>
-                                <a href="#" class="dropdown-item">Surxondaryo</a>
-                                <a href="#" class="dropdown-item">Qashqadaryo</a>
-                                <a href="#" class="dropdown-item">Sirdaryo</a>
-                                <a href="#" class="dropdown-item">Jizzah</a>
-                                <a href="#" class="dropdown-item">Toshkent vil</a>
-                                <a href="#" class="dropdown-item">Navoiy</a>
-                                <a href="#" class="dropdown-item">Qoraqalpog'iston Res</a>
-
-                            </div>
+                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
+                                <div class="dropdown-menu">
+                                    {% for sub in categorie.sub_category %}
+                                        <a href="#" class="dropdown-item">{{ sub.name }}</a>
+                                    {% endfor %}
+                                </div>
                         </div>
-{#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>#}
-                        {% for categorie in categories %}
-                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">{{ categorie.name }}</a>
-                        {% endfor %}
-                        <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
-                    </div>
-                    <div class="social ml-auto">
-                        <a href=""><i class="fab fa-twitter"></i></a>
-                        <a href=""><i class="fab fa-facebook-f"></i></a>
-                        <a href=""><i class="fab fa-linkedin-in"></i></a>
-                        <a href=""><i class="fab fa-instagram"></i></a>
-                        <a href=""><i class="fab fa-youtube"></i></a>
-                    </div>
-                </div>
-            </nav>
-        </div>
-    </div>
-    <!-- Nav Bar End -->
+    {% else %}
 
+                                <a href="#" class="nav-link">{{ categorie.name }}</a>
+
+{% endif %}
+
+                        {#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">{{ categorie.name }}</a>#}
+                        {#                            {% if categorie.sub_category %}#}
+                        {#                            <div class="dropdown-menu">#}
+                        {#                            {% for sub in categorie.sub_category %}#}
+                        {#                                <a href="#" class="dropdown-item">{{ sub.name }}</a>#}
+                        {#                            {% endfor %}#}
+                        {#                            </div>#}
+                        {#                            {% endif %}#}
+
+                    {% endfor %}
+                    <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
+                </div>
+                <div class="social ml-auto">
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-instagram"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </nav>
+    </div>
+</div>
+<!-- Nav Bar End -->
 
 
 <div class="container">
@@ -139,110 +166,110 @@
 </div>
 
 
-    <!-- Footer Start -->
-    <div class="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h3 class="title">Manzil</h3>
-                        <div class="contact-info">
-                            <p><i class="fa fa-map-marker"></i>O'zbekiston, Namangan sh, 326-uy</p>
-                            <p><i class="fa fa-envelope"></i>info@yangiliklar.uz</p>
-                            <p><i class="fa fa-phone"></i>+99890 696 00 10</p>
-                            <div class="social">
-                                <a href=""><i class="fab fa-twitter"></i></a>
-                                <a href=""><i class="fab fa-facebook-f"></i></a>
-                                <a href=""><i class="fab fa-linkedin-in"></i></a>
-                                <a href=""><i class="fab fa-instagram"></i></a>
-                                <a href=""><i class="fab fa-youtube"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h3 class="title">Foydali linklar</h3>
-                        <ul>
-                            <li><a href="#">Yangiliklar.uz</a></li>
-                            <li><a href="#">Kun.uz</a></li>
-                            <li><a href="#">Daryo.uz</a></li>
-                            <li><a href="#">Xabar.uz</a></li>
-                            <li><a href="#">Namanganliklar.uz</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h3 class="title">Tezkor linklar</h3>
-                        <ul>
-                            <li><a href="#">O'zbekiston</a></li>
-                            <li><a href="#">Jahon</a></li>
-                            <li><a href="#">Fan-texnika</a></li>
-                            <li><a href="#">Biznes</a></li>
-                            <li><a href="#">Aloqa</a></li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-6">
-                    <div class="footer-widget">
-                        <h3 class="title">Yangiliklar</h3>
-                        <div class="newsletter">
-                            <p>
-                                Yangiliklar.uz web saytidagi yangiliklardan xabardor bo'lish uchun Obuna bo'ling! <br>
-                                Tezkor xabarlarni biz sizga pochtangiz orqali yetakazmiz!
-                            </p>
-                            <form>
-                                <input class="form-control" type="email" placeholder="Emailni kiriting...">
-                                <button class="btn" type="submit">Yuborish</button>
-                            </form>
+<!-- Footer Start -->
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="title">Manzil</h3>
+                    <div class="contact-info">
+                        <p><i class="fa fa-map-marker"></i>O'zbekiston, Namangan sh, 326-uy</p>
+                        <p><i class="fa fa-envelope"></i>info@yangiliklar.uz</p>
+                        <p><i class="fa fa-phone"></i>+99890 696 00 10</p>
+                        <div class="social">
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-facebook-f"></i></a>
+                            <a href=""><i class="fab fa-linkedin-in"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
-    <!-- Footer End -->
 
-    <!-- Footer Menu Start -->
-    <div class="footer-menu">
-        <div class="container">
-            <div class="f-menu">
-                <a href="">Foydalanish shartlari</a>
-                <a href="">Maxfiylik siyosati</a>
-                <a href="">Cookie-fayllar</a>
-                <a href="">Sayt yo'l xaritasi</a>
-                <a href="">Reklama uchun</a>
-                <a href="">Biz bilan aloqa</a>
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="title">Foydali linklar</h3>
+                    <ul>
+                        <li><a href="#">Yangiliklar.uz</a></li>
+                        <li><a href="#">Kun.uz</a></li>
+                        <li><a href="#">Daryo.uz</a></li>
+                        <li><a href="#">Xabar.uz</a></li>
+                        <li><a href="#">Namanganliklar.uz</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="title">Tezkor linklar</h3>
+                    <ul>
+                        <li><a href="#">O'zbekiston</a></li>
+                        <li><a href="#">Jahon</a></li>
+                        <li><a href="#">Fan-texnika</a></li>
+                        <li><a href="#">Biznes</a></li>
+                        <li><a href="#">Aloqa</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="footer-widget">
+                    <h3 class="title">Yangiliklar</h3>
+                    <div class="newsletter">
+                        <p>
+                            Yangiliklar.uz web saytidagi yangiliklardan xabardor bo'lish uchun Obuna bo'ling! <br>
+                            Tezkor xabarlarni biz sizga pochtangiz orqali yetakazmiz!
+                        </p>
+                        <form>
+                            <input class="form-control" type="email" placeholder="Emailni kiriting...">
+                            <button class="btn" type="submit">Yuborish</button>
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <!-- Footer Menu End -->
+</div>
+<!-- Footer End -->
 
-    <!-- Footer Bottom Start -->
-    <div class="footer-bottom">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 copyright">
-                    <p>Copyright &copy; <a href="https://t.me/auzcoder">Yangilik.uz</a>. Barcha huquqlar himoyalangan.</p>
-                </div>
+<!-- Footer Menu Start -->
+<div class="footer-menu">
+    <div class="container">
+        <div class="f-menu">
+            <a href="">Foydalanish shartlari</a>
+            <a href="">Maxfiylik siyosati</a>
+            <a href="">Cookie-fayllar</a>
+            <a href="">Sayt yo'l xaritasi</a>
+            <a href="">Reklama uchun</a>
+            <a href="">Biz bilan aloqa</a>
+        </div>
+    </div>
+</div>
+<!-- Footer Menu End -->
 
-                <div class="col-md-6 template-by">
-                    <p>Yaratuvchi: <a href="https://t.me/auzcoder">Abdlhafiz Davlatov</a></p>
-                </div>
+<!-- Footer Bottom Start -->
+<div class="footer-bottom">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 copyright">
+                <p>Copyright &copy; <a href="https://t.me/auzcoder">Yangilik.uz</a>. Barcha huquqlar himoyalangan.</p>
+            </div>
+
+            <div class="col-md-6 template-by">
+                <p>Yaratuvchi: <a href="https://t.me/auzcoder">Abdlhafiz Davlatov</a></p>
             </div>
         </div>
     </div>
-    <!-- Footer Bottom End -->
+</div>
+<!-- Footer Bottom End -->
 
-    <!-- Back to Top -->
-    <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
+<!-- Back to Top -->
+<a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
 
 {% block javascript %}
-<!-- JavaScript Libraries -->
+    <!-- JavaScript Libraries -->
     <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.bundle.min.js"></script>
     <script src="{% static 'assets/lib/easing/easing.min.js' %}"></script>

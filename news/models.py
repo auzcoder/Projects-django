@@ -20,6 +20,14 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    @property
+    def sub_category(self):
+        sub = SubCategory.objects.filter(category_id=self.id)
+        if sub:
+            return sub
+        return None
+
+
 class SubCategory(models.Model):
     name = models.CharField(max_length=50)
     category = models.ForeignKey(Category, on_delete=models.CASCADE, null=False, blank=False)
