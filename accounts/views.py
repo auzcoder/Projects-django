@@ -88,12 +88,6 @@ def change_password(request):
 
 
 def logout(request):
-    """
-    Removes the authenticated user's ID from the request and flushes their
-    session data.
-    """
-    # Dispatch the signal before the user is logged out so the receivers have a
-    # chance to find out *who* logged out.
     user = getattr(request, 'user', None)
     if hasattr(user, 'is_authenticated') and not user.is_authenticated():
         user = None
