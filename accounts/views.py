@@ -88,18 +88,6 @@ def change_password(request):
 
 
 
-# def logout(request):
-#     user = getattr(request, 'user', None)
-#     if hasattr(user, 'is_authenticated') and not user.is_authenticated():
-#         user = None
-#     user_logged_out.send(sender=user.__class__, request=request, user=user)
-#
-#     request.session.flush()
-#     if hasattr(request, 'user'):
-#         from django.contrib.auth.models import AnonymousUser
-#         request.user = AnonymousUser()
-
-
 def logout(request):
     auth.logout(request)
     request.session.flush()
