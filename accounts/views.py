@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.contrib.auth import update_session_auth_hash
+from django.contrib.auth import update_session_auth_hash, user_logged_out
 
 from django.core.checks import messages
 from django.shortcuts import render, redirect
@@ -85,4 +85,22 @@ def change_password(request):
     }
     return render(request, "admin/reset-password.html", context)
 
+
+
+def logout(request):
+    """
+    Removes the authenticated user's ID from the request and flushes their
+    session data.
+    """
+    # Dispatch the signal before the user is logged out so the receivers have a
+    # chance to find out *who* logged out.
+    user = getattr(request, 'user', None)
+    if hasattr(user, 'is_authenticated') and not user.is_authenticated():
+        user = None
+    user_logged_out.send(sender=user.__class__, request=request, user=user)
+
+    request.session.flush()
+    if hasattr(request, 'user'):
+        from django.contrib.auth.models import AnonymousUser
+        request.user = AnonymousUser()
 
