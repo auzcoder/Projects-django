@@ -12,7 +12,7 @@
 			</div>
 			<div class="login-menu">
 				<ul>
-					<li><a href="register.html">Ro'yxatdan o'tish</a></li>
+{#					<li><a href="#">Ro'yxatdan o'tish</a></li>#}
 				</ul>
 			</div>
 		</div>
@@ -28,7 +28,7 @@
 						<div class="login-title">
 							<h2 class="text-center text-primary">Tizimga kirish</h2>
 						</div>
-						<form method="post">{% csrf_token %}
+						<form method="POST">{% csrf_token %}
 							<div class="input-group custom">
 								<input type="text" class="form-control form-control-lg" placeholder="Login" name="username">
 								<div class="input-group-append custom">
@@ -49,7 +49,7 @@
 									</div>
 								</div>
 								<div class="col-6">
-									<div class="forgot-password"><a href="{% url 'password_change' %}">Parolimni unutdim!</a></div>
+									<div class="forgot-password"><a href="{% url 'change_password' %}">Parolimni unutdim!</a></div>
 								</div>
 							</div>
 							<div class="row">

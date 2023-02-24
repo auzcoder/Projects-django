@@ -59,29 +59,26 @@ def change_password(request):
             if request.user.is_authenticated:
                 user = User.objects.get(username=request.user.username)
                 if not user.check_password(old_password):
-                    messages.warning(request, "your old password is not correct!")
+                    return HttpResponse(request, "Eski parolingiz noto'g'ri!")
                 else:
                     if new_password != confirmed_new_password:
-                        messages.warning(request, "your new password not match the confirm password !")
+                        return HttpResponse(request, "Yangi parolingiz tasdiqlash paroliga mos kelmaydi!")
 
-                    elif len(new_password) < 8 or new_password.lower() == new_password or \
-                            new_password.upper() == new_password or new_password.isalnum() or \
+                    elif len(new_password) < 5 or  \
                             not any(i.isdigit() for i in new_password):
-                        messages.warning(request, "your password is too weak!")
-
-
+                        return HttpResponse("Parolingiz juda zaif!")
 
                     else:
                         user.set_password(new_password)
                         user.save()
                         update_session_auth_hash(request, user)
 
-                        messages.success(request, "your password has been changed successfuly.!")
+                        return HttpResponse(request, "Parolingiz muvaffaqiyatli o'zgartirildi!")
 
-                        return redirect('dashboard_namespace:home')
+                        return redirect('admin_home_page')
 
         else:
-            messages.warning(request, " sorry , all fields are required !")
+            return HttpResponse(request, " Kechirasiz, barcha maydonlarni to'ldirish shart!")
 
     context = {
 
@@ -89,4 +86,3 @@ def change_password(request):
     return render(request, "admin/reset-password.html", context)
 
 
-i
