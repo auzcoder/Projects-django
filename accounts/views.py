@@ -96,7 +96,7 @@ def logout(request):
 
 
 def admin_news_list(request):
-    news_list = New.published.all().order_by('-date')[:10]
+    news_list = New.published.all().order_by('-date')[:20]
     categories = Category.objects.all()
     category = SubCategory.objects.all()
 

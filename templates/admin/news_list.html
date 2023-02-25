@@ -54,13 +54,23 @@
 								</tr>
 							</thead>
 							<tbody>
-                            
+                            {% for news in news_list %}
 								<tr>
-									<td class="table-plus">Gloria F. Mead</td>
-									<td>25</td>
-									<td>Sagittarius</td>
-									<td>2829 Trainer Avenue Peoria, IL 61602 </td>
-									<td>29-03-2018</td>
+									<td class="table-plus">{{ news.id }}</td>
+									<td>{{ news.name | truncatewords:5}}</td>
+									<td>{{ news.categories }}</td>
+                                    <td>
+                                        <i class="icon-copy fa fa-calendar mx-1" aria-hidden="true"></i> {{ news.created_at | date:"d.m.Y" }}-yil
+                                        |
+                                        <i class="icon-copy fa fa-clock-o mx-1" aria-hidden="true"></i>{{ news.created_at | date:"H:i:s"}}
+                                    </td>
+									<td>
+                                        {% if news.status == 'PB' %}
+                                            <p>Faol</p>
+                                        {% else %}
+                                            <p>Nofaol...</p>
+                                        {% endif %}
+                                    </td>
 									<td>
 										<div class="dropdown">
 											<a class="btn btn-link font-24 p-0 line-height-1 no-arrow dropdown-toggle" href="#" role="button" data-toggle="dropdown">
@@ -74,6 +84,7 @@
 										</div>
 									</td>
 								</tr>
+                            {% endfor %}
 							</tbody>
 						</table>
 					</div>
@@ -84,6 +95,8 @@
 
 	</div>
 
+
+{% endblock content %}
 <!-- buttons for Export datatable -->
 	<script src="{% static 'user/src/plugins/datatables/js/dataTables.buttons.min.js' %}"></script>
 	<script src="{% static 'user/src/plugins/datatables/js/buttons.bootstrap4.min.js' %}"></script>
@@ -94,5 +107,3 @@
 	<script src="{% static 'user/src/plugins/datatables/js/vfs_fonts.js' %}"></script>
 	<!-- Datatable Setting js -->
 	<script src="{% static 'user/vendors/scripts/datatable-setting.js' %}"></script>
-
-{% endblock content %}
