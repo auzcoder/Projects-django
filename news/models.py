@@ -46,7 +46,7 @@ class New (models.Model):
     description = models.CharField(max_length=200, blank=True)
     full_info = RichTextField()
     header_images = models.ImageField(default='news/images/news.jpg', upload_to='news/images', blank=True)
-    category = models.ManyToManyField(Category, null=False, blank=False)
+    category = models.ManyToManyField(Category, null=False, blank=False, related_name='category')
     sub_category = models.ManyToManyField(SubCategory, null=True, blank=True)
     # author = models.ForeignKey(User, on_delete=models.CASCADE)
     # upload_to = 'news/image'

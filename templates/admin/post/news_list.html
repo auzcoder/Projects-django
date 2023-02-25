@@ -52,11 +52,11 @@
 									<td class="table-plus">{{ news.id }}</td>
 									<td>{{ news.name | truncatewords:7}}</td>
 									<td>
-                                        {% for category in admin_categories %}
+{#                                        {% for category in admin_categories %}#}
 {#                                            {% if news == category %}#}
-{#                                                {{ category.name }}#}
+{#                                                {{ news.update_at }}#}
 {#                                            {% endif %}#}
-                                        {% endfor %}
+{#                                        {% endfor %}#}
                                     </td>
                                     <td>
                                         <i class="icon-copy fa fa-calendar mx-1" aria-hidden="true"></i> {{ news.created_at | date:"d.m.Y" }}-yil

@@ -100,6 +100,7 @@ def admin_news_list(request):
     categories = Category.objects.all()
     category = SubCategory.objects.all()
 
+
     context = {
         'admin_news_list': news_list,
         'admin_categories': categories,
