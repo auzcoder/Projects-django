@@ -4,7 +4,7 @@
 {% block title %} Yangiliklar ro'yxati {% endblock title %}
 
 {% block content %}
-<div class="mobile-menu-overlay"></div>
+{#<div class="mobile-menu-overlay"></div>#}
 	<div class="main-container">
 		<div class="pd-ltr-20 xs-pd-20-10">
 			<div class="min-height-200px">
@@ -41,8 +41,8 @@
 						<h4 class="text-blue h4">Barcha yangiliklar</h4>
 {#						<p class="mb-0">you can find more options <a class="text-primary" href="https://datatables.net/" target="_blank">Click Here</a></p>#}
 					</div>
-					<div class="pb-20">
-						<table class="data-table table stripe hover nowrap">
+					<div class="pb-20" style="width: 100%">
+						<table class="data-table table stripe hover">
 							<thead>
 								<tr>
 									<th class="table-plus datatable-nosort">ID</th>
@@ -54,7 +54,7 @@
 								</tr>
 							</thead>
 							<tbody>
-                            {% for news in news_list %}
+                            {% for news in admin_news_list %}
 								<tr>
 									<td class="table-plus">{{ news.id }}</td>
 									<td>{{ news.name | truncatewords:7}}</td>
@@ -66,9 +66,9 @@
                                     </td>
 									<td>
                                         {% if news.status == 'PB' %}
-                                            Faol
+                                            <a style="color: green; font-weight: bold"> Faol </a>
                                         {% elif news.status == 'DF' %}
-                                            Nofaol...
+                                            <a style="color: red; font-weight: bold"> Nofaol... </a>
                                         {% else %}
                                             Ma'lumot mavjud emas...
                                         {% endif %}

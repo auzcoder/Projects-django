@@ -76,8 +76,8 @@ def change_password(request):
                         update_session_auth_hash(request, user)
 
                         return HttpResponse(request, "Parolingiz muvaffaqiyatli o'zgartirildi!")
-
-                        return redirect('admin_home_page')
+                        success_url = 'admin_home_page'
+                        return redirect(success_url)
 
         else:
             return HttpResponse(request, " Kechirasiz, barcha maydonlarni to'ldirish shart!")
@@ -96,14 +96,14 @@ def logout(request):
 
 
 def admin_news_list(request):
-    news_list = New.published.all().order_by('-date')[:20]
+    news_list = New.object.filter().order_by('-date')[:20]
     categories = Category.objects.all()
     category = SubCategory.objects.all()
 
     context = {
-        'news_list': news_list,
-        'categories': categories,
-        'sub_categories': category,
+        'admin_news_list': news_list,
+        'admin_categories': categories,
+        'admin_sub_categories': category,
     }
-    
-    return render(request, 'admin/news_list.html', context)
+
+    return render(request, 'admin/post/news_list.html', context)
