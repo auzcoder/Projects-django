@@ -10,6 +10,7 @@ from django.urls import reverse, reverse_lazy
 from django.views.generic import ListView
 
 import news
+from news.models import New, Category, SubCategory
 from .forms import LoginForm
 
 # Create your views here.
@@ -92,3 +93,17 @@ def logout(request):
     auth.logout(request)
     request.session.flush()
     return redirect("auth_login")
+
+
+def admin_news_list(request):
+    news_list = New.published.all().order_by('-date')[:10]
+    categories = Category.objects.all()
+    category = SubCategory.objects.all()
+
+    context = {
+        'news_list': news_list,
+        'categories': categories,
+        'sub_categories': category,
+    }
+
+    return render(request,'admin/news_list.html', context)

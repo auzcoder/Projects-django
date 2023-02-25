@@ -1,5 +1,5 @@
 from django.urls import path
-from accounts.views import user_login, AdminHomePageView, change_password, logout
+from accounts.views import user_login, AdminHomePageView, change_password, logout, admin_news_list
 from django.contrib.auth.views import PasswordChangeView, PasswordChangeDoneView
 
 urlpatterns = [
@@ -9,4 +9,5 @@ urlpatterns = [
     path('pass-change/', change_password, name='change_password'),
     path('pass-change-done/', PasswordChangeDoneView.as_view(), name='password_change_done'),
     # path('pass-reset/', reset_password, name='reset_password')
+    path('list/', admin_news_list, name='admin_news_list')
 ]
