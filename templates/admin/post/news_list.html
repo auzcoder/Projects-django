@@ -12,26 +12,19 @@
 					<div class="row">
 						<div class="col-md-6 col-sm-12">
 							<div class="title">
-								<h4>DataTable</h4>
+								<h4>Yangiliklar.uz | Postlar </h4>
 							</div>
 							<nav aria-label="breadcrumb" role="navigation">
 								<ol class="breadcrumb">
-									<li class="breadcrumb-item"><a href="index.html">Home</a></li>
-									<li class="breadcrumb-item active" aria-current="page">DataTable</li>
+									<li class="breadcrumb-item"><a href="index.html">Postlar</a></li>
+									<li class="breadcrumb-item active" aria-current="page">Barcha postlar</li>
 								</ol>
 							</nav>
 						</div>
 						<div class="col-md-6 col-sm-12 text-right">
-							<div class="dropdown">
-								<a class="btn btn-primary dropdown-toggle" href="#" role="button" data-toggle="dropdown">
-									January 2018
+								<a class="btn btn-primary" href="#" role="button">
+									<i class="icon-copy fa fa-plus-square-o mr-3 size-40" aria-hidden="true"></i>Post qo'shish
 								</a>
-								<div class="dropdown-menu dropdown-menu-right">
-									<a class="dropdown-item" href="#">Export List</a>
-									<a class="dropdown-item" href="#">Policies</a>
-									<a class="dropdown-item" href="#">View Assets</a>
-								</div>
-							</div>
 						</div>
 					</div>
 				</div>
@@ -41,8 +34,8 @@
 						<h4 class="text-blue h4">Barcha yangiliklar</h4>
 {#						<p class="mb-0">you can find more options <a class="text-primary" href="https://datatables.net/" target="_blank">Click Here</a></p>#}
 					</div>
-					<div class="pb-20" style="width: 100%">
-						<table class="data-table table stripe hover">
+					<div class="pb-20">
+						<table class="data-table table stripe hover" style="width: 100%">
 							<thead>
 								<tr>
 									<th class="table-plus datatable-nosort">ID</th>
@@ -58,7 +51,13 @@
 								<tr>
 									<td class="table-plus">{{ news.id }}</td>
 									<td>{{ news.name | truncatewords:7}}</td>
-									<td>{{ news.category.name }}</td>
+									<td>
+                                        {% for category in admin_categories %}
+{#                                            {% if news == category %}#}
+{#                                                {{ category.name }}#}
+{#                                            {% endif %}#}
+                                        {% endfor %}
+                                    </td>
                                     <td>
                                         <i class="icon-copy fa fa-calendar mx-1" aria-hidden="true"></i> {{ news.created_at | date:"d.m.Y" }}-yil
                                         |
