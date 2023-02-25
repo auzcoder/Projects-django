@@ -57,8 +57,8 @@
                             {% for news in news_list %}
 								<tr>
 									<td class="table-plus">{{ news.id }}</td>
-									<td>{{ news.name | truncatewords:5}}</td>
-									<td>{{ new }}</td>
+									<td>{{ news.name | truncatewords:7}}</td>
+									<td>{{ news.category.name }}</td>
                                     <td>
                                         <i class="icon-copy fa fa-calendar mx-1" aria-hidden="true"></i> {{ news.created_at | date:"d.m.Y" }}-yil
                                         |
@@ -66,9 +66,11 @@
                                     </td>
 									<td>
                                         {% if news.status == 'PB' %}
-                                            <p>Faol</p>
+                                            Faol
+                                        {% elif news.status == 'DF' %}
+                                            Nofaol...
                                         {% else %}
-                                            <p>Nofaol...</p>
+                                            Ma'lumot mavjud emas...
                                         {% endif %}
                                     </td>
 									<td>
@@ -77,9 +79,9 @@
 												<i class="dw dw-more"></i>
 											</a>
 											<div class="dropdown-menu dropdown-menu-right dropdown-menu-icon-list">
-												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> View</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Edit</a>
-												<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> Delete</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-eye"></i> Ko'rish</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-edit2"></i> Taxrirlash</a>
+												<a class="dropdown-item" href="#"><i class="dw dw-delete-3"></i> O'chirish</a>
 											</div>
 										</div>
 									</td>

@@ -105,5 +105,5 @@ def admin_news_list(request):
         'categories': categories,
         'sub_categories': category,
     }
-
+    
     return render(request, 'admin/news_list.html', context)
