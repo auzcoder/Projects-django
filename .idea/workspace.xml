@@ -4,8 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="12fcbb06-8014-4b80-a8bb-3a228e938281" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+    <list default="true" id="12fcbb06-8014-4b80-a8bb-3a228e938281" name="Changes" comment="new&#10;&#10;Yangilash&#10;'Barchasi'">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +74,7 @@
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;vcs.Git&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.customizations&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
   &quot;keyToStringList&quot;: {
@@ -94,7 +94,7 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration name="Projects-django" type="Python.DjangoServer" factoryName="Django server">
+    <configuration name="Projects-django" type="Python.DjangoServer" factoryName="Django server" singleton="false">
       <module name="Projects-django" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -102,15 +102,14 @@
         <env name="PYTHONUNBUFFERED" value="1" />
         <env name="DJANGO_SETTINGS_MODULE" value="MyNews.settings" />
       </envs>
-      <option name="SDK_HOME" value="$USER_HOME$/.local/share/virtualenvs/Projects-django-gGgyvb8O/bin/python" />
-      <option name="SDK_NAME" value="Pipenv (Projects-django)" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
-      <option name="IS_MODULE_SDK" value="false" />
+      <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="launchJavascriptDebuger" value="false" />
       <option name="port" value="8000" />
-      <option name="host" value="" />
+      <option name="host" value="127.0.0.1" />
       <option name="additionalOptions" value="" />
       <option name="browserUrl" value="http://127.0.0.1:8000/" />
       <option name="runTestServer" value="false" />
@@ -146,6 +145,9 @@
       <workItem from="1677211659997" duration="14634000" />
       <workItem from="1677300339233" duration="4833000" />
       <workItem from="1677305538624" duration="9865000" />
+      <workItem from="1677498084961" duration="866000" />
+      <workItem from="1677499131919" duration="228000" />
+      <workItem from="1677499366291" duration="9000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Update .gitignore&quot;&#10;&#10;This reverts commit 28927c2ed93ad5627bf0b0d5c2f105f96f5a0448.">
       <created>1675848394500</created>
