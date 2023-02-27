@@ -97,7 +97,6 @@ class PostDetailView(DetailView):
     context_object_name = 'news'
 
 
-
 # Category uchun views
 class CategoryListView(ListView):
     model = Category
