@@ -120,3 +120,6 @@ class NewsCreateView(CreateView):
     fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
     template_name = 'news/edit/create.html'
     success_url = reverse_lazy('post_list')
+
+
+    
