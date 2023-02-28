@@ -10,5 +10,6 @@ urlpatterns = [
     path('pass-change-done/', PasswordChangeDoneView.as_view(), name='password_change_done'),
     # path('pass-reset/', reset_password, name='reset_password')
     path('list/', admin_news_list, name='admin_news_list'),
+    path('list/detail/<slug:slug>/'),
     path('list/edit/<slug:slug>/', AdminNewsUpdateView.as_view(), name='admin_news_update')
 ]

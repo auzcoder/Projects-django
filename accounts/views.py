@@ -7,7 +7,7 @@ from django.shortcuts import render, redirect
 from django.http import HttpResponse, HttpResponseRedirect
 from django.contrib.auth import authenticate, login, logout
 from django.urls import reverse, reverse_lazy
-from django.views.generic import ListView, UpdateView
+from django.views.generic import ListView, UpdateView, DetailView
 
 import news
 from news.models import New, Category, SubCategory
@@ -108,6 +108,12 @@ def admin_news_list(request):
     }
 
     return render(request, 'admin/post/news_list.html', context)
+
+
+class AdminPostDetailView(DetailView):
+    model = New
+    template_name = 'admin/post/news_detail.html'
+    context_object_name = 'news'
 
 
 class AdminNewsUpdateView(UpdateView):
