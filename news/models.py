@@ -65,6 +65,11 @@ class New (models.Model):
 
     def get_absolute_url(self):
         return reverse('post_detail', args=[str(self.slug)])
+    def get_absolute_url_admin(self):
+        return reverse('admin_news_detail', args=[str(self.slug)])
+
+    def get_absolute_url_admin_edit(self):
+        return reverse('admin_news_update', args=[str(self.slug)])
 
     def __str__(self):
         return self.name
