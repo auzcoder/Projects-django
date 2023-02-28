@@ -11,7 +11,8 @@ from django.views.generic import ListView, UpdateView, DetailView
 
 import news
 from news.models import New, Category, SubCategory
-from .forms import LoginForm
+from .forms import LoginForm, AdminNewsUpdateForm
+
 
 # Create your views here.
 def user_login(request):
@@ -117,7 +118,9 @@ class AdminPostDetailView(DetailView):
 
 
 class AdminNewsUpdateView(UpdateView):
+    #print('aaa')
     model = New
-    fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
+    form_class = AdminNewsUpdateForm
+    # fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
     template_name = 'admin/post/edit/update.html'
     success_url = reverse_lazy('admin_news_list')
