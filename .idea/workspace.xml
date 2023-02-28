@@ -7,7 +7,6 @@
     <list default="true" id="12fcbb06-8014-4b80-a8bb-3a228e938281" name="Changes" comment="new&#10;&#10;Yangilash&#10;'Barchasi'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/views.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/templates/admin/post/edit/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/edit/update.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -156,7 +155,7 @@
       <workItem from="1677499131919" duration="228000" />
       <workItem from="1677499366291" duration="1508000" />
       <workItem from="1677559447285" duration="4237000" />
-      <workItem from="1677570678273" duration="10344000" />
+      <workItem from="1677570678273" duration="12897000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Update .gitignore&quot;&#10;&#10;This reverts commit 28927c2ed93ad5627bf0b0d5c2f105f96f5a0448.">
       <created>1675848394500</created>

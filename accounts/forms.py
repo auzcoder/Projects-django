@@ -24,8 +24,11 @@ class AdminNewsUpdateForm(forms.ModelForm):
             'full_info': forms.Textarea(
                 attrs={'class': "form-control"}
             ),
-            'header_images': forms.URLField(
-                attrs={'class': "custom-file-input"}
+            # 'header_images': forms.FileInput(
+            #      attrs={'class': 'custom-file-input', 'type': 'file'}
+            #  ),
+            'category': forms.TextInput(
+                attrs={'class': "form-control"}
             ),
 
         }

@@ -23,26 +23,14 @@
 					</div>
 				</div>
 				<!-- Default Basic Forms Start -->
-                    <div class="jumbotron">
-                        <h3 class="display-4">Ma'lumotni yangilash</h3>
-                        <hr class="my-4">
-                        <form method="post">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Bekor qilish</button>
-                            <button type="submit" class="btn btn-danger">Saqlash</button>
-                        </form>
-                    </div>
-
-
-
+{#                {{ form.as_p }}#}
 				<div class="pd-20 card-box mb-30">
 					<div class="clearfix">
 						<div class="pull-left">
 							<h4 class="text-blue h4 mb-5">{{ new.name }}</h4><br>
 						</div>
 					</div>
-					<form action="" method="post">
+					<form action="" method="post" enctype="multipart/form-data">
                         {% csrf_token %}
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Sarlavha:</label>
@@ -67,8 +55,8 @@
 							<div class="col-sm-12 col-md-10">
                                 <div class="custom-file">
                                     {{ form.header_images }}
-                                    <input type="file" class="custom-file-input" name="header_images">
-                                    <label class="custom-file-label">Sarlavha rasmi</label>
+{#                                    <input type="file" class="custom-file-input" name="header_images">#}
+{#                                    <label class="custom-file-label">Sarlavha rasmi</label>#}
                                 </div>
 							</div>
 						</div>
