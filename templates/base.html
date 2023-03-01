@@ -115,10 +115,7 @@
                     {#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">O'zbekiston</a>#}
 
 
-
-
                     {% for categorie in categories %}
-
                         {% if categorie.sub_category %}
                             <div class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
@@ -130,7 +127,6 @@
                             </div>
                         {% else %}
                             <a href="#" class="nav-link">{{ categorie.name }}</a>
-
                     {% endif %}
 
                         {#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">{{ categorie.name }}</a>#}
