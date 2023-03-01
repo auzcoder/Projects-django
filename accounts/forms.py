@@ -28,7 +28,7 @@ class AdminNewsUpdateForm(forms.ModelForm):
             #      attrs={'class': 'custom-file-input', 'type': 'file'}
             #  ),
             'category': forms.TextInput(
-                attrs={'class': "form-control"}
+                attrs={'class': "custom-select2 form-control", 'multiple': "multiple", 'style': 'width=100%'}
             ),
 
         }

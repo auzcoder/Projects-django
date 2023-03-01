@@ -63,6 +63,7 @@
 						<div class="form-group row">
 							<label class="col-sm-12 col-md-2 col-form-label">Kategoriya: </label>
 							<div class="col-sm-12 col-md-10">
+                                {{ form.category }}
                                 <select class="custom-select2 form-control" name="category" placeholder="Ma'lumot" multiple="multiple" style="width: 100%;">
                                     <optgroup label="Kategoriyalarni tanlash">
                                         <option value="AK">Alaska</option>
@@ -84,6 +85,7 @@
                                 </select>
                             </div>
 						</div>
+                        {{ form.as_p }}
                         <div class="col-md-12 col-sm-12 mb-30">
                             <div class="pd-20 height-100-p">
                                 <div class="btn-list d-flex">
