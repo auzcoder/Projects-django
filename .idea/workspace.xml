@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="12fcbb06-8014-4b80-a8bb-3a228e938281" name="Changes" comment="new&#10;&#10;Yangilash&#10;'Barchasi'">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/accounts/forms.py" beforeDir="false" afterPath="$PROJECT_DIR$/accounts/forms.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MyNews/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/MyNews/settings.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/templates/admin/post/edit/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin/post/edit/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/base_admin.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/base_admin.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/edit/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/post/edit/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/post/news_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/post/news_list.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/post/news_list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/admin/reset-password.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/admin1/reset-password.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/news/news_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/templates/news/news_detail.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -65,30 +73,30 @@
     <option name="showLibraryContents" value="true" />
     <option name="showMembers" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "ASKED_MARK_IGNORED_FILES_AS_EXCLUDED": "true",
-    "DefaultHtmlFileTemplate": "HTML File",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "/home/auzcoder/Desktop/Projects-django/templates/admin/post/edit",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "preferences.pluginManager",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;ASKED_MARK_IGNORED_FILES_AS_EXCLUDED&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/auzcoder/Desktop/Projects-django/templates/admin/post/edit&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.pluginManager&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "GitStage.ChangesTree.GroupingKeys": [
-      "directory",
-      "module",
-      "repository"
+  &quot;keyToStringList&quot;: {
+    &quot;GitStage.ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;,
+      &quot;repository&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/templates/admin/post/edit" />
@@ -158,6 +166,7 @@
       <workItem from="1677559447285" duration="4237000" />
       <workItem from="1677570678273" duration="14884000" />
       <workItem from="1677650292142" duration="1749000" />
+      <workItem from="1677663572767" duration="3304000" />
     </task>
     <task id="LOCAL-00001" summary="Revert &quot;Update .gitignore&quot;&#10;&#10;This reverts commit 28927c2ed93ad5627bf0b0d5c2f105f96f5a0448.">
       <created>1675848394500</created>
