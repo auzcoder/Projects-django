@@ -119,16 +119,16 @@
 
                     {% for categorie in categories %}
 
-                            {% if categorie.sub_category %}
-                                                    <div class="nav-item dropdown">
-                                                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
-                                                            <div class="dropdown-menu">
-                                                                {% for sub in categorie.sub_category %}
-                                                                    <a href="#" class="dropdown-item">{{ sub.name }}</a>
-                                                                {% endfor %}
-                                                            </div>
-                                                    </div>
-                            {% else %}
+                        {% if categorie.sub_category %}
+                                        <div class="nav-item dropdown">
+                                            <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
+                                                <div class="dropdown-menu">
+                                                    {% for sub in categorie.sub_category %}
+                                                        <a href="#" class="dropdown-item">{{ sub.name }}</a>
+                                                    {% endfor %}
+                                                </div>
+                                        </div>
+                        {% else %}
 
                                 <a href="#" class="nav-link">{{ categorie.name }}</a>
 
