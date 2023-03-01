@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %} Qidiruv natijalari {% endblock title %}
+
+{% block content %}
+    <h2 class="text-info">Qidiruv natijalari</h2>
+    {% for search_new in all_news %}
+        {{ search_new.name }}
+    {% endfor %}
+{% endblock content %}

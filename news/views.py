@@ -121,5 +121,10 @@ class NewsCreateView(CreateView):
     template_name = 'news/edit/create.html'
     success_url = reverse_lazy('post_list')
 
+class NewsSearchView(ListView):
+    model = New
+    template_name = 'news/search.html'
+    context_object_name = 'all_news'
+
 
     
