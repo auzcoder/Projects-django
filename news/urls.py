@@ -9,5 +9,4 @@ urlpatterns = [
     path('edit/<slug:slug>/', NewsUpdateView.as_view(), name='post_edit'),
     path('delete/<slug:slug>/', NewsDeleteView.as_view(), name='post_delete'),
     path('search/', NewsSearchView.as_view(), name='search_news'),
-
 ]
