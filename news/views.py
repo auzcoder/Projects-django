@@ -2,7 +2,6 @@ from django.http import request, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
-
 import news
 from .models import New, Category
 from django.views.generic import TemplateView
