@@ -1,6 +1,5 @@
 from django import forms
 from django.db.models import Model
-
 from news.models import New
 
 
