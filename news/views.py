@@ -125,5 +125,3 @@ class NewsSearchView(ListView):
     model = New
     template_name = 'news/search.html'
     context_object_name = 'all_news'
-
-
