@@ -103,7 +103,6 @@ class CategoryListView(ListView):
     template_name = 'news/news_detail.html'
     context_object_name = 'category'
 
-
 class NewsUpdateView(UpdateView):
     model = New
     fields = ('name', 'description', 'full_info', 'header_images', 'category', 'sub_category', 'status')
