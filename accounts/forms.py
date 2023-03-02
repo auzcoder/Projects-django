@@ -2,7 +2,6 @@ from django import forms
 from django.db.models import Model
 from news.models import New
 
-
 class LoginForm(forms.Form):
     username = forms.CharField()
     password = forms.CharField(widget=forms.PasswordInput)
