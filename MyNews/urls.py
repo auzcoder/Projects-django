@@ -16,6 +16,5 @@ urlpatterns = [
     path('search/', NewsSearchView.as_view(), name='search_news'),
 ]
 
-
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
