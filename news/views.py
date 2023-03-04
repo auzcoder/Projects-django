@@ -1,3 +1,4 @@
+from django.db.models import Q
 from django.http import request, HttpResponse
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
@@ -120,3 +121,9 @@ class NewsSearchView(ListView):
     model = New
     template_name = 'news/search.html'
     context_object_name = 'all_news'
+
+    def get_queryset(self):
+        query = self.request.GET.get('q')
+        return New.object.filter(
+            Q(name__icontains=query) | Q(full_info__icontains=query)
+        )
