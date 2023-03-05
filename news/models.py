@@ -75,7 +75,6 @@ class New (models.Model):
         return self.name
 
 
-
 #Contact bo'limi uchun model
 class Contact(models.Model):
     name = models.CharField(max_length=200)
