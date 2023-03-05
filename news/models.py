@@ -5,7 +5,6 @@ from ckeditor.fields import RichTextField
 from django.urls import reverse
 from django.utils import timezone
 
-
 # Create your models here.
 
 #Publish manager uchun model
