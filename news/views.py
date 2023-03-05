@@ -110,10 +110,12 @@ class NewsUpdateView(UpdateView):
     template_name = 'news/edit/update.html'
     success_url = reverse_lazy('home')
 
+
 class NewsDeleteView(DeleteView):
     model = New
     template_name = 'news/edit/delete.html'
     success_url = reverse_lazy('home')
+
 
 class NewsCreateView(CreateView):
     model = New
