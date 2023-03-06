@@ -99,7 +99,7 @@ class PostDetailView(DetailView):
     context_object_name = 'news'
     def get_object(self):
         post = get_object_or_404(New, slug=self.kwargs['slug'])
-
+        
         # Update the view count on each visit to this post.
         if post:
             post.view_count = post.view_count + 1
