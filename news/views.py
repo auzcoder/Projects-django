@@ -99,12 +99,16 @@ class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
+    
     hit_count = get_hitcount_model().object.get_for_object(New)
     hits = hit_count.hits
     hitcontext =context_object_name['hitcontext'] = {'slug':hit_count.slug}
     hit_count_response = HitCountMixin.hit_count(request, hit_count)
     if hit_count_response.hit_counted:
-        
+        hits = hits + 1
+        hitcontext['hit_counted'] = hit_count_response.hit_counted
+        hitcontext['hit_message'] = hit_count_response.hit_message
+        hitcontext['total_hits'] = hits
 
 
     # count_hit = True
