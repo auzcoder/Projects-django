@@ -1,8 +1,9 @@
 from django.db.models import Q
 from django.http import request, HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
+
 
 from .models import New, Category
 from django.views.generic import TemplateView
@@ -97,12 +98,23 @@ class PostDetailView(DetailView):
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
 
+    # view_count = view_count + 1
+    # def post_detail(self, request, *args, **kwargs):
+    #     news.view_count = news.view_count + 1
+    #     news.save()
+    def get_object(self):
+        return get_object_or_404(New, slug=self.kwargs['slug'])
+        news.view_count = news.view_count + 1
+        # self.view_count = self.view_count + 1
+        # self.save()
+
 
 # Category uchun views
 class CategoryListView(ListView):
     model = Category
     template_name = 'news/news_detail.html'
     context_object_name = 'category'
+
 
 class NewsUpdateView(UpdateView):
     model = New
