@@ -97,16 +97,19 @@ class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
-
-    # view_count = view_count + 1
-    # def post_detail(self, request, *args, **kwargs):
-    #     news.view_count = news.view_count + 1
-    #     news.save()
     def get_object(self):
-        return get_object_or_404(New, slug=self.kwargs['slug'])
-        news.view_count = news.view_count + 1
-        # self.view_count = self.view_count + 1
-        # self.save()
+        post = get_object_or_404(New, slug=self.kwargs['slug'])
+
+        # Update the view count on each visit to this post.
+        if post:
+            post.view_count = post.view_count + 1
+            post.save()
+            #
+            # # Or
+            # post.update_views()
+
+        return post
+
 
 
 # Category uchun views
