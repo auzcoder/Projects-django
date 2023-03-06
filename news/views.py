@@ -98,14 +98,14 @@ class PostDetailView(DetailView):
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
 
-    # Ko'rishlar sonini xissoblash uchun'
-    def get_object(self):
-        post = get_object_or_404(New, slug=self.kwargs['slug'])
-
-        if post:
-            post.view_count = post.view_count + 1
-            post.save()
-        return post
+    # # Ko'rishlar sonini xissoblash uchun'
+    # def get_object(self):
+    #     post = get_object_or_404(New, slug=self.kwargs['slug'])
+    #
+    #     if post:
+    #         post.view_count = post.view_count + 1
+    #         post.save()
+    #     return post
 
 
 
