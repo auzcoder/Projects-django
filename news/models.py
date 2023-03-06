@@ -1,9 +1,12 @@
 
 from django.contrib.auth.models import User
+from django.contrib.contenttypes.fields import GenericRelation
 from django.db import models
 from ckeditor.fields import RichTextField
 from django.urls import reverse
 from django.utils import timezone
+from hitcount.models import HitCount
+
 
 # Create your models here.
 
@@ -50,6 +53,9 @@ class New (models.Model):
     # view_count = models.IntegerField(default=0)
     # author = models.ForeignKey(User, on_delete=models.CASCADE)
     # upload_to = 'news/image'
+
+    # hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk', related_query_name='hit_count_generic_relation')
+
     date = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
     update_at = models.DateTimeField(auto_now=True)
