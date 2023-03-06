@@ -112,7 +112,7 @@ class PostDetailView(DetailView):
 
 class PostDetailViewCount(HitCountDetailView):
     model = New
-    
+    count_hit = True
 
 
 # Category uchun views
