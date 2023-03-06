@@ -99,26 +99,27 @@ class PostDetailView(DetailView, HitCountDetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(PostDetailView, self).get_context_data(**kwargs)
-    #     context.update({
-    #         'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
-    #     })
-    #     return context
-
-    hit_count = get_hitcount_model().object.get_for_object(New)
-    hits = hit_count.hits
-    hitcontext =context_object_name ['hitcount'] = {'slug': hit_count.slug}
-    hit_count_response = HitCountMixin.hit_count(request, hit_count)
-    if hit_count_response.hit_counted:
-        hits = hits + 1
-        hitcontext['hit_counted'] = hit_count_response.hit_counted
-        hitcontext['hit_message'] = hit_count_response.hit_message
-        hitcontext['total_hits'] = hits
-
-
     count_hit = True
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailView, self).get_context_data(**kwargs)
+        context.update({
+            'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
+        })
+        return context
+
+    # hit_count = get_hitcount_model().object.get_for_object(New)
+    # hits = hit_count.hits
+    # hitcontext =context_object_name ['hitcount'] = {'slug': hit_count.slug}
+    # hit_count_response = HitCountMixin.hit_count(request, hit_count)
+    # if hit_count_response.hit_counted:
+    #     hits = hits + 1
+    #     hitcontext['hit_counted'] = hit_count_response.hit_counted
+    #     hitcontext['hit_message'] = hit_count_response.hit_message
+    #     hitcontext['total_hits'] = hits
+
+
+
 
     # # Ko'rishlar sonini xissoblash uchun'
     # def get_object(self):

@@ -54,7 +54,7 @@ class New (models.Model):
     # author = models.ForeignKey(User, on_delete=models.CASCADE)
     # upload_to = 'news/image'
 
-    # hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk', related_query_name='hit_count_generic_relation')
+    hit_count_generic = GenericRelation(HitCount, object_id_field='object_pk', related_query_name='hit_count_generic_relation')
 
     date = models.DateTimeField(default=timezone.now)
     created_at = models.DateTimeField(auto_now_add=True)
