@@ -2,6 +2,7 @@ import hitcount
 from django.db.models import Q
 from django.http import request, HttpResponse
 from django.shortcuts import render, get_object_or_404
+from django.template import context
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from hitcount.utils import get_hitcount_model
@@ -98,7 +99,7 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
-    context_object_name = 'news'       
+    context_object_name = 'news'
 
     # hit_count = get_hitcount_model().object.get_for_object(New)
     # hits = hit_count.hits
@@ -128,12 +129,24 @@ class PostDetailViewCount(HitCountDetailView):
     model = New
     count_hit = True
 
-    def get_context_data(self, **kwargs):
-        context = super(PostDetailViewCount, self).get_context_data(**kwargs)
-        context.update({
-            'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
-        })
-        return context
+    # def get_context_data(self, **kwargs):
+    #     context = super(PostDetailViewCount, self).get_context_data(**kwargs)
+    #     context.update({
+    #         'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
+    #     })
+    #     return context
+
+
+
+    hit_count = get_hitcount_model().object.get_for_object(New)
+    hits = hit_count.hits
+    hitcontext =context['hitcount'] = {'slug': hit_count.slug}
+    hit_count_response = HitCountMixin.hit_count(request, hit_count)
+    if hit_count_response.hit_counted:
+        hits = hits + 1
+        hitcontext['hit_counted'] = hit_count_response.hit_counted
+        hitcontext['hit_message'] = hit_count_response.hit_message
+        hitcontext['total_hits'] = hits
 
 
 # Category uchun views

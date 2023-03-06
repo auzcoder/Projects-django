@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{#{% load hitcount_tags %}#}
+{% load hitcount_tags %}
 {% block title %} Yangiliklar {% endblock title %}
 
 {% block content %}
@@ -30,7 +30,7 @@
                                 <i class="bi bi-alarm"></i> {{ new.date | date:"H:i"}}
                             </p>
                             <p class="card-fuchsia mx-3">
-{#                                <i class="bi bi-eye"></i> Ko'rish: {% get_hit_count for new %} ta#}
+                                <i class="bi bi-eye"></i> Ko'rish: {% get_hit_count for new %} ta
                             </p>
                         </div>
                         <!-- Card -->
