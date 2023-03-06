@@ -104,7 +104,6 @@ class PostDetailView(DetailView):
         if post:
             post.view_count = post.view_count + 1
             post.save()
-
         return post
 
 
