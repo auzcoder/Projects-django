@@ -33,6 +33,7 @@ from .forms import ContactForm
 #
 #         return (context)
 
+
 # Home page uchun yangiliklar views
 
 def HomePageView(request):
