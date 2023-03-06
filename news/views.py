@@ -1,11 +1,11 @@
+import hitcount
 from django.db.models import Q
 from django.http import request, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
 from hitcount.utils import get_hitcount_model
-from hitcount.views import  HitCountDetailView
-
+from hitcount.views import HitCountDetailView, HitCountMixin
 
 from .models import New, Category
 from django.views.generic import TemplateView
@@ -100,6 +100,12 @@ class PostDetailView(DetailView):
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
     hit_count = get_hitcount_model().object.get_for_object(New)
+    hits = hit_count.hits
+    hitcontext =context_object_name['hitcontext'] = {'slug':hit_count.slug}
+    hit_count_response = HitCountMixin.hit_count(request, hit_count)
+    if hit_count_response.hit_counted:
+        
+
 
     # count_hit = True
 
