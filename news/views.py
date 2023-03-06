@@ -3,6 +3,7 @@ from django.http import request, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
+from hitcount.views import  HitCountDetailView
 
 
 from .models import New, Category
@@ -108,6 +109,10 @@ class PostDetailView(DetailView):
     #         post.save()
     #     return post
 
+
+class PostDetailViewCount(HitCountDetailView):
+    model = New
+    
 
 
 # Category uchun views
