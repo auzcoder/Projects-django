@@ -95,18 +95,10 @@ class PostListView(ListView):
 
 
 # Post detail uchun views
-class PostDetailView(DetailView, HitCountDetailView):
+class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
-    context_object_name = 'news'
-    count_hit = True
-
-    def get_context_data(self, **kwargs):
-        context = super(PostDetailView, self).get_context_data(**kwargs)
-        context.update({
-            'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
-        })
-        return context
+    context_object_name = 'news'       
 
     # hit_count = get_hitcount_model().object.get_for_object(New)
     # hits = hit_count.hits
@@ -132,9 +124,16 @@ class PostDetailView(DetailView, HitCountDetailView):
 
 
 # Ko'rishlar uchun viewslar sonini aniqlash
-# class PostDetailViewCount(HitCountDetailView):
-#     model = New
-#     count_hit = True
+class PostDetailViewCount(HitCountDetailView):
+    model = New
+    count_hit = True
+
+    def get_context_data(self, **kwargs):
+        context = super(PostDetailViewCount, self).get_context_data(**kwargs)
+        context.update({
+            'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
+        })
+        return context
 
 
 # Category uchun views
