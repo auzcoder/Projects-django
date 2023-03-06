@@ -47,7 +47,7 @@ class New (models.Model):
     header_images = models.ImageField(default='news/images/news.jpg', upload_to='news/images', blank=True)
     category = models.ManyToManyField(Category, null=False, blank=False, related_name='category')
     sub_category = models.ManyToManyField(SubCategory, null=True, blank=True)
-    view_count = models.IntegerField(default=0)
+    # view_count = models.IntegerField(default=0)
     # author = models.ForeignKey(User, on_delete=models.CASCADE)
     # upload_to = 'news/image'
     date = models.DateTimeField(default=timezone.now)
