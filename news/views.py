@@ -97,6 +97,7 @@ class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
+    # count_hit = True
 
     # # Ko'rishlar sonini xissoblash uchun'
     # def get_object(self):

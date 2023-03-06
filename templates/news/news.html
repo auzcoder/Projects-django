@@ -16,7 +16,7 @@
                           <!--Card image-->
                           <div class="view overlay">
                             <img class="card-img-top" src="{{ new.header_images.url }}" class="card-img-top"
-                                 alt="{{ new.header_images.name }}" style="height: 144px; width: 215px">
+                                 alt="{{ new.header_images.name }}" style="height: 144px;">
                           </div>
                           <!--Card content-->
                           <div class="card-body">
@@ -29,7 +29,7 @@
                                 <i class="bi bi-alarm"></i> {{ new.date | date:"H:i"}}
                             </p>
                             <p class="card-fuchsia mx-3">
-                                <i class="bi bi-eye"></i> Ko'rish: {{ new.view_count }} ta
+                                <i class="bi bi-eye"></i> Ko'rish: {{ new.get_hit_count }} ta
                             </p>
                         </div>
                         <!-- Card -->
