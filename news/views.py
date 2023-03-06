@@ -3,6 +3,7 @@ from django.http import request, HttpResponse
 from django.shortcuts import render, get_object_or_404
 from django.views.generic import ListView, DetailView, UpdateView, CreateView, DeleteView
 from django.urls import reverse_lazy
+from hitcount.utils import get_hitcount_model
 from hitcount.views import  HitCountDetailView
 
 
@@ -98,6 +99,8 @@ class PostDetailView(DetailView):
     model = New
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
+    hit_count = get_hitcount_model().object.get_for_object(New)
+
     # count_hit = True
 
     # # Ko'rishlar sonini xissoblash uchun'
