@@ -57,7 +57,6 @@ def HomePageView(request):
     }
     return render(request, 'home.html', context)
 
-
 # Contact page uchun views
 class ContactPageView(TemplateView):
     template_name = 'contact.html'
@@ -79,7 +78,6 @@ class ContactPageView(TemplateView):
         }
 
         return render(request, 'contact.html', context)
-
 
 
 # examp = [
