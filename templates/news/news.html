@@ -22,7 +22,7 @@
                           <!--Card content-->
                           <div class="card-body">
                             <!--Title-->
-                              <h5 class="card-title"><a href="{{ new.get_absolute_url }}">{{  new.name | slice:":50" }}...</a></h5>
+                              <h5 class="card-title"><a href="{{ new.get_absolute_url }}">{{  new.name | truncatewords:7 }}</a></h5>
                             <!--Text-->
                           </div>
                             <p class="card-fuchsia mp-2 mb-0">
