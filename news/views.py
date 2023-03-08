@@ -149,6 +149,7 @@ class PostDetailView(DetailView):
     #     hitcontext['total_hits'] = hits
 
 
+
 # Category uchun views
 class CategoryListView(ListView):
     model = Category
