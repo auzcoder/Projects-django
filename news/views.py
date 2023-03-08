@@ -187,3 +187,4 @@ class NewsSearchView(ListView):
         return New.object.filter(
             Q(name__icontains=query) | Q(full_info__icontains=query)
         )
+    
