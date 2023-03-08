@@ -137,6 +137,7 @@ class PostDetailView(DetailView):
     #     return context
 
 
+
     # hit_count = get_hitcount_model().object.get_for_object(New)
     # hits = hit_count.hits
     # hitcontext =context['hitcount'] = {'slug': hit_count.slug}
