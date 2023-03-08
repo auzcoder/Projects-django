@@ -13,6 +13,7 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 
 # Class boyicha homepagega kategoriyalarni yangiliklarini chiqarish
+
 # class HomePageView(ListView):
 #     template_name = 'home.html'
 #     news = New.object.all()
