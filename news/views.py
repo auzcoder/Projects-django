@@ -82,7 +82,6 @@ class ContactPageView(TemplateView):
         return render(request, 'contact.html', context)
 
 
-
 # examp = [
 #     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
 #     {'id':1,"category_name":'Hududlar', 'sub':[{"id":22, 'name':'namangan'}]},
