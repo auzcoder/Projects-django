@@ -123,6 +123,7 @@ class PostDetailView(DetailView):
     #     return post
 
 
+
 # # Ko'rishlar uchun viewslar sonini aniqlash
 # class PostDetailViewCount(HitCountDetailView):
 #     model = New
