@@ -1,4 +1,3 @@
-import hitcount
 from django.db.models import Q
 from django.http import request, HttpResponse
 from django.shortcuts import render, get_object_or_404
@@ -13,7 +12,6 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 
 # Class boyicha homepagega kategoriyalarni yangiliklarini chiqarish
-
 # class HomePageView(ListView):
 #     template_name = 'home.html'
 #     news = New.object.all()
@@ -101,29 +99,29 @@ class PostDetailView(DetailView):
     template_name = 'news/news_detail.html'
     context_object_name = 'news'
 
-
-class PostCountHitDetailView(HitCountDetailView):
-    model = New  # your model goes here
-    count_hit = True
-
-    def some_view(request, slug):
-        object = get_object_or_404(New, slug=slug)
-        context = {}
-
-        # hitcount logic
-        hit_count = get_hitcount_model().objects.get_for_object(object)
-        hits = hit_count.hits
-        hitcontext = context['hitcount'] = {'slug': hit_count.slug}
-        hit_count_response = HitCountMixin.hit_count(request, hit_count)
-        if hit_count_response.hit_counted:
-            hits = hits + 1
-            hitcontext['hit_counted'] = hit_count_response.hit_counted
-            hitcontext['hit_message'] = hit_count_response.hit_message
-            hitcontext['total_hits'] = hits
-
-        # … extra logic …
-
-        return render(request, 'news/news_detail.html', context)
+#
+# class PostCountHitDetailView(HitCountDetailView):
+#     model = New  # your model goes here
+#     count_hit = True
+#
+#     def some_view(request, slug):
+#         object = get_object_or_404(New, slug=slug)
+#         context = {}
+#
+#         # hitcount logic
+#         hit_count = get_hitcount_model().objects.get_for_object(object)
+#         hits = hit_count.hits
+#         hitcontext = context['hitcount'] = {'slug': hit_count.slug}
+#         hit_count_response = HitCountMixin.hit_count(request, hit_count)
+#         if hit_count_response.hit_counted:
+#             hits = hits + 1
+#             hitcontext['hit_counted'] = hit_count_response.hit_counted
+#             hitcontext['hit_message'] = hit_count_response.hit_message
+#             hitcontext['total_hits'] = hits
+#
+#         # … extra logic …
+#
+#         return render(request, 'news/news_detail.html', context)
 
         # hit_count = get_hitcount_model().object.get_for_object(New)
     # hits = hit_count.hits
