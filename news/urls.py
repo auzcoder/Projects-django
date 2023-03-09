@@ -1,5 +1,5 @@
 from django.urls import path, include
-from .views import PostListView, PostDetailView, NewsUpdateView, NewsDeleteView, NewsSearchView, PostCountHitDetailView
+from .views import PostListView, PostDetailView, NewsUpdateView, NewsDeleteView, NewsSearchView
 
 # urls
 urlpatterns = [
