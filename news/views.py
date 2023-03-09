@@ -104,20 +104,6 @@ class PostDetailView(HitCountDetailView):
 
 
 
-# # Ko'rishlar uchun viewslar sonini aniqlash
-# class PostDetailViewCount(HitCountDetailView):
-#     model = New
-#     count_hit = True
-
-    # def get_context_data(self, **kwargs):
-    #     context = super(PostDetailViewCount, self).get_context_data(**kwargs)
-    #     context.update({
-    #         'popular_posts': New.objects.order_by('-hit_count_generic__hits')[:3],
-    #     })
-    #     return context
-
-
-
     # hit_count = get_hitcount_model().object.get_for_object(New)
     # hits = hit_count.hits
     # hitcontext =context['hitcount'] = {'slug': hit_count.slug}
