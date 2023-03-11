@@ -118,13 +118,21 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'uz-uz'
 
 TIME_ZONE = 'Asia/Tashkent'
 
 USE_I18N = True
 
 USE_TZ = True
+
+from django.utils.translation import gettext as _
+
+LANGUAGES = [
+    ('uz-uz', _('Uzbek')),
+    ('en-us', _('English')),
+    ('ru-ru', _('Russian')),
+]
 
 
 # Static files (CSS, JavaScript, Images)
