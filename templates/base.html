@@ -118,7 +118,7 @@
                         {% get_current_language as LANGUAGE_CODE %}
                         {% get_available_languages as LANGUAGES %}
                         {% get_language_info_list for LANGUAGES as languages %}
-                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Til</a>
+                        <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">{% blocktrans %} Till {% endblocktrans %}</a>
                         <div class="dropdown-menu">
                             {% for language in languages %}
                                 <a href="/{{ language.code }}/" class="dropdown-item" >
@@ -127,14 +127,6 @@
                         </div>
                     </div>
 
-                </div>
-                <div class="social ml-auto">
-                    <a href=""><i class="fab fa-twitter"></i></a>
-                    <a href=""><i class="fab fa-facebook-f"></i></a>
-                    <a href=""><i class="fab fa-linkedin-in"></i></a>
-                    <a href=""><i class="fab fa-instagram"></i></a>
-                    <a href=""><i class="fab fa-youtube"></i></a>
-                </div>
             </div>
         </nav>
     </div>

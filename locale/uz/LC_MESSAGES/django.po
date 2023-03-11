@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2023-03-11 20:02+0500\n"
+"POT-Creation-Date: 2023-03-11 20:06+0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,21 +16,18 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Plural-Forms: nplurals=4; plural=(n%10==1 && n%100!=11 ? 0 : n%10>=2 && "
-"n%10<=4 && (n%100<12 || n%100>14) ? 1 : n%10==0 || (n%10>=5 && n%10<=9) || "
-"(n%100>=11 && n%100<=14)? 2 : 3);\n"
-
+"Plural-Forms: nplurals=1; plural=0;\n"
 #: MyNews/settings.py:134
 msgid "Uzbek"
-msgstr "Yзбекский"
+msgstr "O'zbekcha"
 
 #: MyNews/settings.py:135
 msgid "English"
-msgstr "Английский"
+msgstr "English"
 
 #: MyNews/settings.py:136
 msgid "Russian"
-msgstr "Русский"
+msgstr ""
 
 #: templates/base.html:8
 msgid " AuzBlog "
@@ -38,53 +35,53 @@ msgstr ""
 
 #: templates/base.html:44
 msgid " Haqida "
-msgstr "O"
+msgstr ""
 
 #: templates/base.html:45
 msgid " Maxfiylik "
-msgstr "Конфиденциальность"
+msgstr ""
 
 #: templates/base.html:46
 msgid " Shartlar "
-msgstr "Условия"
+msgstr ""
 
 #: templates/base.html:47
 msgid " Bog'lanish "
-msgstr "Связь"
+msgstr ""
 
 #: templates/base.html:97
 msgid " Bosh sahifa "
-msgstr "Домашняя"
+msgstr ""
 
 #: templates/base.html:114
 msgid " Aloqa "
-msgstr "Связь"
+msgstr ""
 
 #: templates/base.html:121
 msgid " Till "
-msgstr "Язык"
+msgstr ""
 
-#: templates/base.html:157
+#: templates/base.html:149
 msgid " Manzil "
-msgstr "Адрес"
+msgstr ""
 
-#: templates/base.html:159
+#: templates/base.html:151
 msgid " O'zbekiston, Namangan sh, 326-uy "
-msgstr "Узбекистан, Наманганское ш., 326-уй"
+msgstr ""
 
-#: templates/base.html:175
+#: templates/base.html:167
 msgid " Foydali linklar "
-msgstr "Полезные ссылки"
+msgstr ""
 
-#: templates/base.html:188
+#: templates/base.html:180
 msgid " Tezkor linklar "
-msgstr "Быстрые ссылки"
+msgstr ""
 
-#: templates/base.html:201
+#: templates/base.html:193
 msgid "Yangiliklar"
-msgstr "Новости"
+msgstr ""
 
-#: templates/base.html:203
+#: templates/base.html:195
 msgid ""
 "\n"
 "                            Yangiliklar.uz web saytidagi yangiliklardan "
@@ -94,98 +91,96 @@ msgid ""
 "                            "
 msgstr ""
 
-#: templates/base.html:209
+#: templates/base.html:201
 msgid " Emailni kiriting... "
-msgstr "Введите адрес электронной почты..."
+msgstr ""
 
-#: templates/base.html:210
+#: templates/base.html:202
 msgid " Yuborish "
-msgstr "Отправка"
+msgstr ""
 
-#: templates/base.html:224
+#: templates/base.html:216
 msgid " Foydalanish shartlari "
-msgstr "Условия эксплуатации"
+msgstr ""
 
-#: templates/base.html:225
+#: templates/base.html:217
 msgid "Maxfiylik siyosati "
-msgstr "Политика конфиденциальности"
+msgstr ""
 
-#: templates/base.html:226
+#: templates/base.html:218
 msgid "Cookie-fayllar "
-msgstr "Печенье"
+msgstr ""
 
-#: templates/base.html:227
+#: templates/base.html:219
 msgid "Sayt yo'l xaritasi "
-msgstr "Карта сайта"
+msgstr ""
 
-#: templates/base.html:228
+#: templates/base.html:220
 msgid "Reklama uchun "
-msgstr "Для рекламы"
+msgstr ""
 
-#: templates/base.html:229
+#: templates/base.html:221
 msgid "Biz bilan aloqa "
-msgstr "Связаться с нами"
+msgstr ""
 
-#: templates/base.html:240
+#: templates/base.html:232
 msgid " Barcha huquqlar himoyalangan. "
-msgstr "Все права защищены"
+msgstr ""
 
-#: templates/base.html:244
+#: templates/base.html:236
 msgid " Yaratuvchi: "
-msgstr "Создатель:"
+msgstr ""
 
 #: templates/contact.html:3
 msgid " Biz bilan aloqa "
-msgstr "Связаться с нами"
+msgstr ""
 
 #: templates/contact.html:36
 msgid ""
 " Biz bilan bog'lanishni istaganingiz uchun tashakkur. Bizga yuborga "
 "xabaringiz biz uchun muxim. "
 msgstr ""
-" Спасибо за желание связаться с нами. Напишите нам Ваше сообщение важно для "
-"нас."
 
 #: templates/contact.html:38
 msgid " O'zbekiston, Namangan vil, Namangan sh, Boburshoh ko'chasi, 161-uy "
-msgstr "Узбекистан, город Наманган, Наманганский район, улица Бобуршох, 161"
+msgstr ""
 
 #: templates/home.html:35
 msgid " O'zbekiston "
-msgstr "Узбекистан"
+msgstr ""
 
 #: templates/home.html:50
 msgid " Jahon "
-msgstr "Mир"
+msgstr ""
 
 #: templates/home.html:74
 msgid " Iqtisodiyot "
-msgstr "Эконом"
+msgstr ""
 
 #: templates/home.html:89
 msgid " Jamiyat "
-msgstr "Общество"
+msgstr ""
 
 #: templates/home.html:112
 msgid " Fan-texnika "
-msgstr "Наука и технология"
+msgstr ""
 
 #: templates/home.html:127
 msgid " Sport "
-msgstr "Спорт"
+msgstr ""
 
 #: templates/home.html:169
 msgid " Tavsiya etamiz "
-msgstr "Мы рекомендуем"
+msgstr ""
 
 #: templates/news/news.html:47 templates/news/news_detail.html:29
 msgid " Eng yangi postlar "
-msgstr "Последние новости"
+msgstr ""
 
 #: templates/news/search.html:5
 msgid " Qidiruv natijalari "
-msgstr "Результаты поиска"
+msgstr ""
 
 #: templates/news/search.html:12
 msgid " Qidiruv natijalari: "
-msgstr "Результаты поиска:"
+msgstr ""
