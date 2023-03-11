@@ -51,31 +51,31 @@ msgstr "Contact"
 
 #: templates/base.html:97
 msgid " Bosh sahifa "
-msgstr ""
+msgstr "Home"
 
 #: templates/base.html:114
 msgid " Aloqa "
-msgstr ""
+msgstr "Contact"
 
 #: templates/base.html:157
 msgid " Manzil "
-msgstr ""
+msgstr "Address"
 
 #: templates/base.html:159
 msgid " O'zbekiston, Namangan sh, 326-uy "
-msgstr ""
+msgstr "Uzbekistan, Namangan sh, 326-uy"
 
 #: templates/base.html:175
 msgid " Foydali linklar "
-msgstr ""
+msgstr "Useful Links"
 
 #: templates/base.html:188
 msgid " Tezkor linklar "
-msgstr ""
+msgstr "Quick links"
 
 #: templates/base.html:201
 msgid "Yangiliklar"
-msgstr ""
+msgstr "News"
 
 #: templates/base.html:203
 msgid ""
@@ -86,6 +86,12 @@ msgid ""
 "yetakazmiz!\n"
 "                            "
 msgstr ""
+"\n"
+"News from the website YAngiliklar.uz"
+"Subscribe to stay informed! <br> \n"
+" We send instant messages to you in your mail "
+"we will deliver!\n"
+" "
 
 #: templates/base.html:209
 msgid " Emailni kiriting... "
@@ -93,73 +99,75 @@ msgstr ""
 
 #: templates/base.html:210
 msgid " Yuborish "
-msgstr ""
+msgstr "Enter email..."
 
 #: templates/base.html:224
 msgid " Foydalanish shartlari "
-msgstr ""
+msgstr "Terms of use"
 
 #: templates/base.html:225
 msgid "Maxfiylik siyosati "
-msgstr ""
+msgstr "Privacy Policy"
 
 #: templates/base.html:226
 msgid "Cookie-fayllar "
-msgstr ""
+msgstr "Cookies"
 
 #: templates/base.html:227
 msgid "Sayt yo'l xaritasi "
-msgstr ""
+msgstr "Sayt yo'l xaritasi"
 
 #: templates/base.html:228
 msgid "Reklama uchun "
-msgstr ""
+msgstr "For advertising"
 
 #: templates/base.html:229
 msgid "Biz bilan aloqa "
-msgstr ""
+msgstr "Contact us"
 
 #: templates/base.html:240
 msgid " Barcha huquqlar himoyalangan. "
-msgstr ""
+msgstr "All rights reserved"
 
 #: templates/base.html:244
 msgid " Yaratuvchi: "
-msgstr ""
+msgstr "Creator:"
 
 #: templates/contact.html:3
 msgid " Biz bilan aloqa "
-msgstr ""
+msgstr "Contact us"
 
 #: templates/contact.html:36
 msgid ""
 " Biz bilan bog'lanishni istaganingiz uchun tashakkur. Bizga yuborga "
 "xabaringiz biz uchun muxim. "
 msgstr ""
+" Thank you for wanting to contact us. Send us "
+"Your message is important to us."
 
 #: templates/contact.html:38
 msgid " O'zbekiston, Namangan vil, Namangan sh, Boburshoh ko'chasi, 161-uy "
-msgstr ""
+msgstr "Uzbekistan, Namangan city, Namangan district, Boburshoh street, 161"
 
 #: templates/home.html:34
 msgid " O'zbekiston "
-msgstr ""
+msgstr "Uzbekistan"
 
 #: templates/home.html:49
 msgid " Jahon "
-msgstr ""
+msgstr "The world"
 
 #: templates/home.html:73
 msgid " Iqtisodiyot "
-msgstr ""
+msgstr "Economy"
 
 #: templates/home.html:88
 msgid " Jamiyat "
-msgstr ""
+msgstr "Society"
 
 #: templates/home.html:111
 msgid " Fan-texnika "
-msgstr ""
+msgstr "Science and technology"
 
 #: templates/home.html:126
 msgid " Sport "
@@ -167,16 +175,16 @@ msgstr ""
 
 #: templates/home.html:168
 msgid " Tavsiya etamiz "
-msgstr ""
+msgstr "Sports"
 
 #: templates/news/news.html:99
 msgid " Eng yangi postlar "
-msgstr ""
+msgstr "Newest posts"
 
 #: templates/news/search.html:4
 msgid " Qidiruv natijalari "
-msgstr ""
+msgstr "Search results"
 
 #: templates/news/search.html:11
 msgid " Qidiruv natijalari: "
-msgstr ""
+msgstr "Search results:"

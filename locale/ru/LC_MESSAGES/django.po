@@ -21,15 +21,15 @@ msgstr ""
 "(n%100>=11 && n%100<=14)? 2 : 3);\n"
 #: MyNews/settings.py:134
 msgid "Uzbek"
-msgstr ""
+msgstr "Yзбекский"
 
 #: MyNews/settings.py:135
 msgid "English"
-msgstr ""
+msgstr "Английский"
 
 #: MyNews/settings.py:136
 msgid "Russian"
-msgstr ""
+msgstr "Русский"
 
 #: templates/base.html:8
 msgid " AuzBlog "
@@ -37,23 +37,23 @@ msgstr ""
 
 #: templates/base.html:44
 msgid " Haqida "
-msgstr ""
+msgstr "O"
 
 #: templates/base.html:45
 msgid " Maxfiylik "
-msgstr ""
+msgstr "Конфиденциальность"
 
 #: templates/base.html:46
 msgid " Shartlar "
-msgstr ""
+msgstr "Условия"
 
 #: templates/base.html:47
 msgid " Bog'lanish "
-msgstr ""
+msgstr "Связь"
 
 #: templates/base.html:97
 msgid " Bosh sahifa "
-msgstr ""
+msgstr "Домашняя"
 
 #: templates/base.html:114
 msgid " Aloqa "
@@ -61,124 +61,126 @@ msgstr ""
 
 #: templates/base.html:157
 msgid " Manzil "
-msgstr ""
+msgstr "Адрес"
 
 #: templates/base.html:159
 msgid " O'zbekiston, Namangan sh, 326-uy "
-msgstr ""
+msgstr "Узбекистан, Наманганское ш., 326-уй"
 
 #: templates/base.html:175
 msgid " Foydali linklar "
-msgstr ""
+msgstr "Полезные ссылки"
 
 #: templates/base.html:188
 msgid " Tezkor linklar "
-msgstr ""
+msgstr "Быстрые ссылки"
 
 #: templates/base.html:201
 msgid "Yangiliklar"
-msgstr ""
+msgstr "Новости"
 
 #: templates/base.html:203
 msgid ""
 "\n"
-"                            Yangiliklar.uz web saytidagi yangiliklardan "
-"xabardor bo'lish uchun Obuna bo'ling! <br>\n"
-"                            Tezkor xabarlarni biz sizga pochtangiz orqali "
-"yetakazmiz!\n"
-"                            "
+"Новости с сайта Novyozy.uz"
+"Подпишитесь, чтобы быть в курсе! <br> \n"
+" Мы отправляем вам мгновенные сообщения на вашу почту "
+"мы доставим! \n"
+" "
 msgstr ""
 
 #: templates/base.html:209
 msgid " Emailni kiriting... "
-msgstr ""
+msgstr "Введите адрес электронной почты..."
 
 #: templates/base.html:210
 msgid " Yuborish "
-msgstr ""
+msgstr "Отправка"
 
 #: templates/base.html:224
 msgid " Foydalanish shartlari "
-msgstr ""
+msgstr "Условия эксплуатации"
 
 #: templates/base.html:225
 msgid "Maxfiylik siyosati "
-msgstr ""
+msgstr "Политика конфиденциальности"
 
 #: templates/base.html:226
 msgid "Cookie-fayllar "
-msgstr ""
+msgstr "Печенье"
 
 #: templates/base.html:227
 msgid "Sayt yo'l xaritasi "
-msgstr ""
+msgstr "Карта сайта"
 
 #: templates/base.html:228
 msgid "Reklama uchun "
-msgstr ""
+msgstr "Для рекламы"
 
 #: templates/base.html:229
 msgid "Biz bilan aloqa "
-msgstr ""
+msgstr "Связаться с нами"
 
 #: templates/base.html:240
 msgid " Barcha huquqlar himoyalangan. "
-msgstr ""
+msgstr "Все права защищены"
 
 #: templates/base.html:244
 msgid " Yaratuvchi: "
-msgstr ""
+msgstr "Создатель:"
 
 #: templates/contact.html:3
 msgid " Biz bilan aloqa "
-msgstr ""
+msgstr "Связаться с нами"
 
 #: templates/contact.html:36
 msgid ""
 " Biz bilan bog'lanishni istaganingiz uchun tashakkur. Bizga yuborga "
 "xabaringiz biz uchun muxim. "
 msgstr ""
+" Спасибо за желание связаться с нами. Напишите нам "
+"Ваше сообщение важно для нас."
 
 #: templates/contact.html:38
 msgid " O'zbekiston, Namangan vil, Namangan sh, Boburshoh ko'chasi, 161-uy "
-msgstr ""
+msgstr "Узбекистан, город Наманган, Наманганский район, улица Бобуршох, 161"
 
 #: templates/home.html:34
 msgid " O'zbekiston "
-msgstr ""
+msgstr "Узбекистан"
 
 #: templates/home.html:49
 msgid " Jahon "
-msgstr ""
+msgstr "Mир"
 
 #: templates/home.html:73
 msgid " Iqtisodiyot "
-msgstr ""
+msgstr "Эконом"
 
 #: templates/home.html:88
 msgid " Jamiyat "
-msgstr ""
+msgstr "Общество"
 
 #: templates/home.html:111
 msgid " Fan-texnika "
-msgstr ""
+msgstr "Наука и технология"
 
 #: templates/home.html:126
 msgid " Sport "
-msgstr ""
+msgstr "Спорт"
 
 #: templates/home.html:168
 msgid " Tavsiya etamiz "
-msgstr ""
+msgstr "Мы рекомендуем"
 
 #: templates/news/news.html:99
 msgid " Eng yangi postlar "
-msgstr ""
+msgstr "Последние новости"
 
 #: templates/news/search.html:4
 msgid " Qidiruv natijalari "
-msgstr ""
+msgstr "Результаты поиска"
 
 #: templates/news/search.html:11
 msgid " Qidiruv natijalari: "
-msgstr ""
+msgstr "Результаты поиска:"
