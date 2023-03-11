@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'ckeditor',
     'ckeditor_uploader',
     'hitcount' # hitcount ko'rishlar sonini ip ddress bo'yicha aniqlash uchun
+    'modeltranslate'
 ]
 
 CKEDITOR_UPLOAD_PATH = '../uploads/'
@@ -134,7 +135,7 @@ LANGUAGES = [
     ('en', _('English')),
     ('ru', _('Russian')),
 ]
-
+MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
