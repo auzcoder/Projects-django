@@ -9,9 +9,11 @@ from news.views import HomePageView, ContactPageView, NewsCreateView, NewsSearch
 urlpatterns = [
     path('auth/', include('accounts.urls')),
     path('admin/', admin.site.urls, name='admin'),
-
-] + i18n_patterns(
+    path('ckeditor/', include('ckeditor_uploader.urls')),
     path('i18n/', include('django.conf.urls.i18n')),
+
+]
+urlpatterns += i18n_patterns(
     path('', HomePageView, name='home'),
     path('news/', include('news.urls')),
     path('contact/', ContactPageView.as_view(), name='contact'),
