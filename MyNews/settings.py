@@ -43,6 +43,7 @@ INSTALLED_APPS = [
 
     'news', #ichki yangi yaratilgan app
     'accounts',
+    'i18n'
 
     #tashqi app
     'ckeditor',
@@ -127,12 +128,12 @@ USE_I18N = True
 
 USE_TZ = True
 
-from django.utils.translation import gettext as _
+from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
-    ('uz-uz', _('Uzbek')),
-    ('en-us', _('English')),
-    ('ru-ru', _('Russian')),
+    ('uz', _('O\'zbek')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
 ]
 
 

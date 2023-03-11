@@ -1,4 +1,5 @@
 {% load static %}
+{% load i18n %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -121,26 +122,30 @@
 
                     {% endfor %}
                     <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Hududlar</a>
-                        <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">Toshkent</a>
-                            <a href="#" class="dropdown-item">Andijon</a>
-                            <a href="#" class="dropdown-item">Farg'ona</a>
-                            <a href="#" class="dropdown-item">Namangan</a>
-                            <a href="#" class="dropdown-item">Samarqand</a>
-                            <a href="#" class="dropdown-item">Buxoro</a>
-                            <a href="#" class="dropdown-item">Xorazim</a>
-                            <a href="#" class="dropdown-item">Surxondaryo</a>
-                            <a href="#" class="dropdown-item">Qashqadaryo</a>
-                            <a href="#" class="dropdown-item">Sirdaryo</a>
-                            <a href="#" class="dropdown-item">Jizzah</a>
-                            <a href="#" class="dropdown-item">Toshkent vil</a>
-                            <a href="#" class="dropdown-item">Navoiy</a>
-                            <a href="#" class="dropdown-item">Qoraqalpog'iston Res</a>
 
+                    <div class="nav-item dropdown">
+                        <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tilni tanlang</a>
+                        <div class="dropdown-menu">
+                            <a href="#" class="dropdown-item">O'zbek</a>
+                            <a href="#" class="dropdown-item">Pусский</a>
+                            <a href="#" class="dropdown-item">English</a>
                         </div>
                     </div>
+                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}
+                        <input name="next" type="hidden" value="{{ redirect_to }}">
+                        <select name="language">
+                            {% get_current_language as LANGUAGE_CODE %}
+                            {% get_available_languages as LANGUAGES %}
+                            {% get_language_info_list for LANGUAGES as languages %}
+                            {% for language in languages %}
+                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>
+                                    {{ language.name_local }} ({{ language.code }})
+                                </option>
+                            {% endfor %}
+                        </select>
+                        <input type="submit" value="Go">
+                    </form>
+
                 </div>
                 <div class="social ml-auto">
                     <a href=""><i class="fab fa-twitter"></i></a>
