@@ -15,14 +15,16 @@ from .forms import ContactForm
 
 
 def HomePageView(request):
+
     categories = Category.objects.all()
     news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
     uzbekistan_news = New.published.all().filter(category__name='O\'zbekiston').order_by('-date')[0:3]
-    jahon_news = New.published.all().filter(category__name='Jahon').order_by('-date')[0:3]
-    iqtisod_news = New.published.all().filter(category__name='Iqtisodiyot').order_by('-date')[0:3]
+    jahon_news = New.published.all().filter(category__name='Jahon' or 'The world' or 'Mир').order_by('-date')[0:3]
+    iqtisod_news = New.published.all().filter(category__name='Iqtisodiyot' or 'Эконом' or 'Economy').order_by('-date')[0:3]
     jamiyat_news = New.published.all().filter(category__name='Jamiyat').order_by('-date')[0:3]
     fantexnika_news = New.published.all().filter(category__name='Fan-texnika').order_by('-date')[0:3]
     sport_news = New.published.all().filter(category__name='Sport').order_by('-date')[0:3]
+
 
     context = {
         'news_list': news_list,
