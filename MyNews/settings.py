@@ -47,8 +47,8 @@ INSTALLED_APPS = [
     #tashqi app
     'ckeditor',
     'ckeditor_uploader',
-    'hitcount' # hitcount ko'rishlar sonini ip ddress bo'yicha aniqlash uchun
-    'modeltranslate'
+    'hitcount', # hitcount ko'rishlar sonini ip ddress bo'yicha aniqlash uchun
+    'modeltranslation',
 ]
 
 CKEDITOR_UPLOAD_PATH = '../uploads/'
