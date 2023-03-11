@@ -100,7 +100,7 @@
                     {% for categorie in categories %}
                         {% if categorie.sub_category %}
                             <div class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
+                                <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">{{ categorie.name }}</a>
                                     <div class="dropdown-menu">
                                         {% for sub in categorie.sub_category %}
                                             <a href="#" class="dropdown-item">{{ sub.name }}</a>
@@ -108,7 +108,7 @@
                                     </div>
                             </div>
                         {% else %}
-                            <a href="#" class="nav-link">{{ categorie.name }}</a>
+                            <a href="{% url 'post_list' %}" class="nav-link">{{ categorie.name }}</a>
                         {% endif %}
                     {% endfor %}
                     <a href="{% url 'contact' %}" class="nav-item nav-link bigtext"> {% blocktrans %} Aloqa {% endblocktrans %}</a>
