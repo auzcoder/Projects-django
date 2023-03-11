@@ -131,7 +131,7 @@ USE_TZ = True
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
-    ('uz', _('O\'zbek')),
+    ('uz', _('Uzbek')),
     ('en', _('English')),
     ('ru', _('Russian')),
 ]
