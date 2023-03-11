@@ -109,17 +109,7 @@
                             </div>
                         {% else %}
                             <a href="#" class="nav-link">{{ categorie.name }}</a>
-                    {% endif %}
-
-                        {#                        <a href="{% url 'post_list' %}" class="nav-item nav-link bigtext">{{ categorie.name }}</a>#}
-                        {#                            {% if categorie.sub_category %}#}
-                        {#                            <div class="dropdown-menu">#}
-                        {#                            {% for sub in categorie.sub_category %}#}
-                        {#                                <a href="#" class="dropdown-item">{{ sub.name }}</a>#}
-                        {#                            {% endfor %}#}
-                        {#                            </div>#}
-                        {#                            {% endif %}#}
-
+                        {% endif %}
                     {% endfor %}
                     <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
 
