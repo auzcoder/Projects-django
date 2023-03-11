@@ -5,7 +5,7 @@
 <head>
     <meta charset="utf-8">
     <meta charset="utf-8">
-    <title>{% block title %} AuzBlog {% endblock %}</title>
+    <title>{% block title %}{% blocktrans %} AuzBlog {% endblocktrans %}{% endblock %}</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="Yangiliklar.uz sayti uchun" name="keywords">
     <meta content="Yangiliklar.uz sayti uchun" name="description">
@@ -41,10 +41,10 @@
             </div>
             <div class="col-md-6">
                 <div class="tb-menu">
-                    <a href="">Haqida</a>
-                    <a href="">Maxfiylik</a>
-                    <a href="">Shartlar</a>
-                    <a href="{% url 'contact' %}">Bog'lanish</a>
+                    <a href="">{% blocktrans %} Haqida {% endblocktrans %}</a>
+                    <a href="">{% blocktrans %} Maxfiylik {% endblocktrans %}</a>
+                    <a href="">{% blocktrans %} Shartlar {% endblocktrans %}</a>
+                    <a href="{% url 'contact' %}"> {% blocktrans %} Bog'lanish {% endblocktrans %}</a>
                 </div>
             </div>
         </div>
@@ -94,7 +94,7 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
-                    <a href="{% url 'home' %}" class="nav-item nav-link active">Bosh sahifa</a>
+                    <a href="{% url 'home' %}" class="nav-item nav-link active"> {% blocktrans %} Bosh sahifa {% endblocktrans %}</a>
 
 
                     {% for categorie in categories %}
@@ -111,42 +111,27 @@
                             <a href="#" class="nav-link">{{ categorie.name }}</a>
                         {% endif %}
                     {% endfor %}
-                    <a href="{% url 'contact' %}" class="nav-item nav-link bigtext">Aloqa</a>
+                    <a href="{% url 'contact' %}" class="nav-item nav-link bigtext"> {% blocktrans %} Aloqa {% endblocktrans %}</a>
 
-                    {% get_current_language as LANGUAGE_CODE %}
-                    {% get_available_languages as LANGUAGES %}
-                    {% get_language_info_list for LANGUAGES as languages %}
+
                     <div class="nav-item dropdown">
+                        {% get_current_language as LANGUAGE_CODE %}
+                        {% get_available_languages as LANGUAGES %}
+                        {% get_language_info_list for LANGUAGES as languages %}
                         <a href="" class="nav-link dropdown-toggle" data-toggle="dropdown">Til</a>
                         <div class="dropdown-menu">
                             {% for language in languages %}
                                 <a href="/{{ language.code }}/" class="dropdown-item" >
                                 {{ language.name_local }} ({{ language.code }})</a>
                             {% endfor %}
-
                         </div>
                     </div>
 
-{#                    <form action="{% url 'set_language' %}" method="post">{% csrf_token %}#}
-{#                        <input name="next" type="hidden" value="{{ redirect_to }}">#}
-{#                        <select name="language">#}
-{#                            {% get_current_language as LANGUAGE_CODE %}#}
-{#                            {% get_available_languages as LANGUAGES %}#}
-{#                            {% get_language_info_list for LANGUAGES as languages %}#}
-{#                            {% for language in languages %}#}
-{#                                <option value="{{ language.code }}"{% if language.code == LANGUAGE_CODE %} selected{% endif %}>#}
-{#                                    {{ language.name_local }}#}
-{#                                </option>#}
-{#                            {% endfor %}#}
-{#                        </select>#}
-{#                        <input type="submit" value="Go">#}
-{#                    </form>#}
-
                 </div>
                 <div class="social ml-auto">
-                    <a href="/uz"><i class="fab fa-twitter"></i></a>
-                    <a href="/ru"><i class="fab fa-facebook-f"></i></a>
-                    <a href="/en"><i class="fab fa-linkedin-in"></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-facebook-f"></i></a>
+                    <a href=""><i class="fab fa-linkedin-in"></i></a>
                     <a href=""><i class="fab fa-instagram"></i></a>
                     <a href=""><i class="fab fa-youtube"></i></a>
                 </div>
@@ -169,9 +154,9 @@
         <div class="row">
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
-                    <h3 class="title">Manzil</h3>
+                    <h3 class="title"> {% blocktrans %} Manzil {% endblocktrans %}</h3>
                     <div class="contact-info">
-                        <p><i class="fa fa-map-marker"></i>O'zbekiston, Namangan sh, 326-uy</p>
+                        <p><i class="fa fa-map-marker"></i> {% blocktrans %} O'zbekiston, Namangan sh, 326-uy {% endblocktrans %}</p>
                         <p><i class="fa fa-envelope"></i>info@yangiliklar.uz</p>
                         <p><i class="fa fa-phone"></i>+99890 696 00 10</p>
                         <div class="social">
@@ -187,7 +172,7 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
-                    <h3 class="title">Foydali linklar</h3>
+                    <h3 class="title"> {% blocktrans %} Foydali linklar {% endblocktrans %}</h3>
                     <ul>
                         <li><a href="#">Yangiliklar.uz</a></li>
                         <li><a href="#">Kun.uz</a></li>
@@ -200,7 +185,7 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
-                    <h3 class="title">Tezkor linklar</h3>
+                    <h3 class="title"> {% blocktrans %} Tezkor linklar {% endblocktrans %}</h3>
                     <ul>
                         <li><a href="#">O'zbekiston</a></li>
                         <li><a href="#">Jahon</a></li>
@@ -213,15 +198,16 @@
 
             <div class="col-lg-3 col-md-6">
                 <div class="footer-widget">
-                    <h3 class="title">Yangiliklar</h3>
+                    <h3 class="title">{% blocktrans %}Yangiliklar{% endblocktrans %}</h3>
                     <div class="newsletter">
-                        <p>
+                        <p>{% blocktrans %}
                             Yangiliklar.uz web saytidagi yangiliklardan xabardor bo'lish uchun Obuna bo'ling! <br>
                             Tezkor xabarlarni biz sizga pochtangiz orqali yetakazmiz!
+                            {% endblocktrans %}
                         </p>
                         <form>
-                            <input class="form-control" type="email" placeholder="Emailni kiriting...">
-                            <button class="btn" type="submit">Yuborish</button>
+                            <input class="form-control" type="email" placeholder=" {% blocktrans %} Emailni kiriting... {% endblocktrans %}">
+                            <button class="btn" type="submit"> {% blocktrans %} Yuborish {% endblocktrans %}</button>
                         </form>
                     </div>
                 </div>
@@ -235,12 +221,12 @@
 <div class="footer-menu">
     <div class="container">
         <div class="f-menu">
-            <a href="">Foydalanish shartlari</a>
-            <a href="">Maxfiylik siyosati</a>
-            <a href="">Cookie-fayllar</a>
-            <a href="">Sayt yo'l xaritasi</a>
-            <a href="">Reklama uchun</a>
-            <a href="">Biz bilan aloqa</a>
+            <a href="">{% blocktrans %} Foydalanish shartlari {% endblocktrans %}</a>
+            <a href=""> {% blocktrans %}Maxfiylik siyosati {% endblocktrans %}</a>
+            <a href=""> {% blocktrans %}Cookie-fayllar {% endblocktrans %}</a>
+            <a href=""> {% blocktrans %}Sayt yo'l xaritasi {% endblocktrans %}</a>
+            <a href=""> {% blocktrans %}Reklama uchun {% endblocktrans %}</a>
+            <a href=""> {% blocktrans %}Biz bilan aloqa {% endblocktrans %}</a>
         </div>
     </div>
 </div>
@@ -251,11 +237,11 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6 copyright">
-                <p>Copyright &copy; <a href="https://t.me/auzcoder">Yangilik.uz</a>. Barcha huquqlar himoyalangan.</p>
+                <p>Copyright &copy; <a href="https://t.me/auzcoder">Yangilik.uz</a>. {% blocktrans %} Barcha huquqlar himoyalangan. {% endblocktrans %}</p>
             </div>
 
             <div class="col-md-6 template-by">
-                <p>Yaratuvchi: <a href="https://t.me/auzcoder">Abdlhafiz Davlatov</a></p>
+                <p> {% blocktrans %} Yaratuvchi: {% endblocktrans %}<a href="https://t.me/auzcoder">Abdulhafiz Davlatov</a></p>
             </div>
         </div>
     </div>

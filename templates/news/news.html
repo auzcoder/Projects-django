@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 {% load hitcount_tags %}
 {% block title %} Yangiliklar {% endblock title %}
 
@@ -96,7 +97,7 @@
             <div class="col-lg-4">
                 <div class="sidebar">
                     <div class="sidebar-widget">
-                        <h2 class="sw-title">Eng yangi postlar</h2>
+                        <h2 class="sw-title"> {% blocktrans %} Eng yangi postlar {% endblocktrans %}</h2>
                         <div class="news-list">
                             {% for news in news_list %}
                             <div class="nl-item">

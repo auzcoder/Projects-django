@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %} Biz bilan aloqa {% endblock title %}
+{% block title %} {% blocktrans %} Biz bilan aloqa {% endblocktrans %} {% endblock title %}
 
 {% block content %}
     <!-- Contact Start -->
@@ -33,9 +33,9 @@
                         <div class="contact-info">
                             <h3><a href="{% url 'home' %}"> Yangiliklar.uz </a></h3>
                             <p>
-                                Biz bilan bog'lanishni istaganingiz uchun tashakkur. Bizga yuborga xabaringiz biz uchun muxim.
+                                {% blocktrans %} Biz bilan bog'lanishni istaganingiz uchun tashakkur. Bizga yuborga xabaringiz biz uchun muxim. {% endblocktrans %}
                             </p>
-                            <h4><i class="fa fa-map-marker"></i>O'zbekiston, Namangan vil, Namangan sh, Boburshoh ko'chasi, 161-uy</h4>
+                            <h4><i class="fa fa-map-marker"></i> {% blocktrans %} O'zbekiston, Namangan vil, Namangan sh, Boburshoh ko'chasi, 161-uy {% endblocktrans %}</h4>
                             <h4><i class="fa fa-envelope"></i>info@yangiliklar.uz</h4>
                             <h4><i class="fa fa-phone"></i>+99890 696 00 10</h4>
                             <div class="social">

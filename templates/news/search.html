@@ -1,14 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load i18n %}
 
-{% block title %} Qidiruv natijalari {% endblock %}
+{% block title %} {% blocktrans %} Qidiruv natijalari {% endblocktrans %} {% endblock %}
 
 {% block content %}
 
 
 
     <!-- Single News Start-->
-    <h2 class="text-info my-3">Qidiruv natijalari: </h2>
+    <h2 class="text-info my-3"> {% blocktrans %} Qidiruv natijalari: {% endblocktrans %}</h2>
 
     <div class="single-news">
         <div class="container">
