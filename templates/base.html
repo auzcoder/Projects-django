@@ -126,9 +126,7 @@
                     <div class="nav-item dropdown">
                         <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">Tilni tanlang</a>
                         <div class="dropdown-menu">
-                            <a href="#" class="dropdown-item">O'zbek</a>
-                            <a href="#" class="dropdown-item">Pусский</a>
-                            <a href="#" class="dropdown-item">English</a>
+                            <a href="#" class="dropdown-item" {% if language.code == LANGUAGE_CODE %} active {% endif %}>{{ language.name_local }} ({{ language.code }})</a>
                         </div>
                     </div>
                     <form action="{% url 'set_language' %}" method="post">{% csrf_token %}

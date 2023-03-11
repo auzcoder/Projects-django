@@ -43,7 +43,6 @@ INSTALLED_APPS = [
 
     'news', #ichki yangi yaratilgan app
     'accounts',
-    'i18n'
 
     #tashqi app
     'ckeditor',
