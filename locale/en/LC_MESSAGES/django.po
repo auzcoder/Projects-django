@@ -63,7 +63,7 @@ msgstr "Address"
 
 #: templates/base.html:159
 msgid " O'zbekiston, Namangan sh, 326-uy "
-msgstr "Uzbekistan, Namangan sh, 326-uy"
+msgstr "326, Namangan city, Uzbekistan"
 
 #: templates/base.html:175
 msgid " Foydali linklar "
@@ -80,26 +80,26 @@ msgstr "News"
 #: templates/base.html:203
 msgid ""
 "\n"
-"                            Yangiliklar.uz web saytidagi yangiliklardan "
-"xabardor bo'lish uchun Obuna bo'ling! <br>\n"
-"                            Tezkor xabarlarni biz sizga pochtangiz orqali "
-"yetakazmiz!\n"
-"                            "
+" Yangiliklar.uz web saytidagi yangiliklardan "
+"xabardor bo'lish uchun Obuna bo'ling! <br> \n "
+" Tezkor xabarlarni biz sizga pochtangiz orqali "
+"yetakazmiz! \n"
+" "
 msgstr ""
 "\n"
-"News from the website YAngiliklar.uz"
-"Subscribe to stay informed! <br> \n"
+"News from the website Yangiliklar.uz \n "
+"Subscribe to stay informed! <br> \n "
 " We send instant messages to you in your mail "
-"we will deliver!\n"
+"we will deliver! \n "
 " "
 
 #: templates/base.html:209
 msgid " Emailni kiriting... "
-msgstr ""
+msgstr "Enter email..."
 
 #: templates/base.html:210
 msgid " Yuborish "
-msgstr "Enter email..."
+msgstr "Send"
 
 #: templates/base.html:224
 msgid " Foydalanish shartlari "
@@ -171,11 +171,11 @@ msgstr "Science and technology"
 
 #: templates/home.html:126
 msgid " Sport "
-msgstr ""
+msgstr "Sports"
 
 #: templates/home.html:168
 msgid " Tavsiya etamiz "
-msgstr "Sports"
+msgstr "We recommend"
 
 #: templates/news/news.html:99
 msgid " Eng yangi postlar "
