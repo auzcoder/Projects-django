@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'ckeditor_uploader',
     'hitcount', # hitcount ko'rishlar sonini ip ddress bo'yicha aniqlash uchun
     'modeltranslation',
+    'whitenoise.runserver_nostatic',
 ]
 
 CKEDITOR_UPLOAD_PATH = '../uploads/'
@@ -55,6 +56,7 @@ CKEDITOR_FILENAME_GENERATOR = 'utils.get_filename'
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.locale.LocaleMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -141,13 +143,17 @@ LOCALE_PATHS = BASE_DIR, 'locale',
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = '/home/s240806/auzcoder.uz/django/static'
+STATICFILES_DIRS = '/home/s240806/auzcoder.uz/django/static_files'
 
-#static fayllar
-STATICFILES_DIRS = [BASE_DIR / 'static']
+# STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATICFILES_DIRS = [BASE_DIR / 'static']
 
 MEDIA_URL = '/uploads/'
-MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+# MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
+MEDIA_ROOT = '/home/s240806/auzcoder.uz/django/uploads'
+
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 
 # Default primary key field type
