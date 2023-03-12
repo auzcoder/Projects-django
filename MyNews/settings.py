@@ -27,7 +27,6 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['auzcoder.uz', 'www.auzcoder.uz']
 
-
 # Application definition
 
 INSTALLED_APPS = [
