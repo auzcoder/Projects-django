@@ -144,7 +144,7 @@ LOCALE_PATHS = BASE_DIR, 'locale',
 
 STATIC_URL = 'static/'
 STATIC_ROOT = '/home/s240806/auzcoder.uz/django/static'
-STATICFILES_DIRS = '/home/s240806/auzcoder.uz/django/static_files'
+STATICFILES_DIRS = ('/home/s240806/auzcoder.uz/django/static_files', )
 
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_DIRS = [BASE_DIR / 'static']
