@@ -18,9 +18,17 @@ class PublishedManager(models.Manager):
 # Kategoriya yaratish qismi uchun model
 class Category(models.Model):
     name = models.CharField(max_length=50)
+    view_home = models.BooleanField(default=True)
 
     def __str__(self):
         return self.name
+
+    @property
+    def news(self):
+        news = New.object.filter(category__id=self.id)
+        if news:
+            return news
+        return []
 
     @property
     def sub_category(self):

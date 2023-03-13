@@ -15,6 +15,8 @@ from .forms import ContactForm
 
 
 def HomePageView(request):
+    print(request.LANGUAGE_CODE)
+
 
     categories = Category.objects.all()
     news_list = New.published.all().order_by('-date')[:9] # [:9] bu listdan kelayotgan xabarlar sonini cheklash uchun hozir bu yerdan jami bo'lib 9 dona yangilik keladi
