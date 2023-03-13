@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-vyd0*0@ex&_e&tuii)=gds)1w*3f$+6-&66s13_vi9)+^p2$1n
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['auzcoder.uz', 'www.auzcoder.uz']
+ALLOWED_HOSTS = ['auzcoder.uz', 'www.auzcoder.uz', '127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -132,11 +132,12 @@ USE_TZ = True
 from django.utils.translation import gettext_lazy as _
 
 LANGUAGES = [
-    ('uz-uz', _('O\'zbekcha')),
-    ('en-us', _('English')),
-    ('ru-ru', _('Russian')),
+    ('uz', _('O\'zbekcha')),
+    ('en', _('English')),
+    ('ru', _('Russian')),
 ]
 
+MODELTRANSLATION_LANGUAGES = ('uz', 'en', 'ru')
 MODELTRANSLATION_DEFAULT_LANGUAGE = 'uz'
 LOCALE_PATHS = BASE_DIR, 'locale',
 
@@ -146,13 +147,15 @@ LOCALE_PATHS = BASE_DIR, 'locale',
 STATIC_URL = 'static/'
 STATIC_ROOT = '/home/s240806/auzcoder.uz/django/static'
 STATICFILES_DIRS = ('/home/s240806/auzcoder.uz/django/static_files', )
+MEDIA_URL = '/uploads/'
+MEDIA_ROOT = '/home/s240806/auzcoder.uz/django/uploads'
 
+# STATIC_URL = 'static/'
 # STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 # STATICFILES_DIRS = [BASE_DIR / 'static']
-
-MEDIA_URL = '/uploads/'
+# MEDIA_URL = '/uploads/'
 # MEDIA_ROOT = os.path.join(BASE_DIR, 'uploads')
-MEDIA_ROOT = '/home/s240806/auzcoder.uz/django/uploads'
+
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
