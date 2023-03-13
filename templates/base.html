@@ -94,7 +94,7 @@
 
             <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse">
                 <div class="navbar-nav mr-auto">
-                    <a href="{% url 'home' as url %}" class="nav-item nav-link {% if request.path == url %} active {% endif %}"> {% blocktrans %} Bosh sahifa {% endblocktrans %}</a>
+                    <a href="{% url 'home' %}" class="nav-item nav-link {% if request.path == 'home' %} active {% endif %}"> {% blocktrans %} Bosh sahifa {% endblocktrans %}</a>
 
 
                     {% for categorie in categories %}
@@ -108,7 +108,7 @@
                                     </div>
                             </div>
                         {% else %}
-                            <a href="{% url  'post_list' as url %}" class="nav-link {% if request.path == url %} active {% endif %}">{{ categorie.name }}</a>
+                            <a href="{% url  'post_list' %}" class="nav-link ">{{ categorie.name }}</a>
                         {% endif %}
                     {% endfor %}
                     <a href="{% url 'contact' %}" class="nav-item nav-link bigtext"> {% blocktrans %} Aloqa {% endblocktrans %}</a>
