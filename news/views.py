@@ -14,6 +14,8 @@ from django.views.generic import TemplateView
 from .forms import ContactForm
 
 
+
+
 import threading
 #
 # def add_hits(request):
