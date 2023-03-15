@@ -8,6 +8,8 @@ django = "*"
 django-hitcount = "*"
 django-modeltranslation = "*"
 whitenoise = "*"
+django-jazzmin = "*"
+pillow = "*"
 
 [dev-packages]
 
